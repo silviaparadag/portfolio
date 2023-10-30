@@ -1,0 +1,14 @@
+@import '../core/variables';
+
+.header {
+    padding: 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+
+
+    &__title {
+        color: $color-primary3;
+        font-family: $font-secondary3;
+        padding: 10px 10px 10px;
+    }
+}

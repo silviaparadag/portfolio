@@ -1,0 +1,8 @@
+@import '../core/variables.scss';
+
+.main {
+    background-color: $color-secondary2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

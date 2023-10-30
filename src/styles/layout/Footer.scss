@@ -1,0 +1,19 @@
+@import '../core/variables.scss';
+
+.footer {
+    color: $color-primary3;
+    padding: 1rem;
+    width: 100%;
+    height: 60px;
+    left: 0px;
+    bottom: 0px;
+    font-size: .8rem;
+
+    &__text {
+
+        &--link {
+            color: $color-primary3;
+            text-decoration: none;
+        }
+    }
+}
