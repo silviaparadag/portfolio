@@ -1,8 +1,32 @@
-# React + Vite
+# Silvia Parada's portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+## 🎲 | Getting started
+
+1. To start the project, download or fork the repository.
+
+2. To install NPM packages & dependencies, run the following line in your terminal:
+~~~
+npm install
+~~~
+
+3. To be able to view the page in the browser, run:
+~~~
+npm start
+~~~
+
+> **Note** In this project, we can find the following files and folders:
+>- The folder 📂 `src/` is the files of this web page: HTML, SCSS, JavaScript and images.
+>- The folders 📚 `public/` and `docs/`, are generated automatically when we start the project. GULP reads the files found in the src/ folder, processes them and then generates them inside `public/` and `docs/`.
+>- Other 📝 files found in the repository root as 'gulpfile.js', 'package.json', etc. are configuration files and we don't need to modify them.
+>-  To publish on GitHub Pages and generate your page for production run the command: `npm run githubpages`.
+
+
+&nbsp;
+
+
+© Silvia Parada | 2023 
+
