@@ -1,8 +1,8 @@
-# Silvia Parada's portfolio
+# 💫 Silvia Parada's portfolio 💫
 
+Hi 👋🏻!
 
-
-
+This is my portfolio repository 👩🏻‍💻 
 
 ## 🎲 | Getting started
 
@@ -24,6 +24,15 @@ npm start
 >- Other 📝 files found in the repository root as 'gulpfile.js', 'package.json', etc. are configuration files and we don't need to modify them.
 >-  To publish on GitHub Pages and generate your page for production run the command: `npm run githubpages`.
 
+
+&nbsp;
+
+
+For further questions, please contact me:
+
+&nbsp;
+
+[✉️](mailto:silviaparadag@yahoo.es) | [LinkedIn](https://www.linkedin.com/in/silviaparadag/) | [GitHub](https://github.com/silviaparadag)
 
 &nbsp;
 
