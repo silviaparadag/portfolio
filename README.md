@@ -1,3 +1,5 @@
+![Badge en Desarollo](https://img.shields.io/badge/STATUS-IN%20PROGRESS-green)
+
 # 💫 Silvia Parada's portfolio 💫
 
 Hi 👋🏻!
