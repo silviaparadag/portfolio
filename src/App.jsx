@@ -19,7 +19,7 @@ function App() {
         <Route
           path="/Home"
           element={
-            <>
+            <div className="App">
               <Header />
               <main className="main">
                 <div>
@@ -47,7 +47,7 @@ function App() {
                   Click on the Vite and React logos to learn more
                 </p>
               </main>
-            </>
+            </div>
           }
         />
         {/* <Route

@@ -4,6 +4,13 @@
 @import './layout/Landing';
 @import './layout/Footer';
 
+
+.App {
+  height: 100%;
+  background-image: linear-gradient(to bottom, #f0f7d467 25%, #f0f7d467), url("../images/lime.jpeg");
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -40,12 +47,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
