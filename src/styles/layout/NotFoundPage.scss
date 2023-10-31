@@ -1,0 +1,45 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.notfound {
+    padding: 100px 20px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: RickAndMorty;
+    font-size: 1rem;
+
+    &__title {
+        color: $color-secondary3;
+        text-shadow: $color-primary2 1px 0 10px;
+
+    }
+
+    &__img {
+        height: 70%;
+        border-radius: 30px;
+        box-shadow: 2px 4px 2px $color-secondary3;
+    }
+
+    &__link {
+        background-color: $color-primary;
+        padding: 15px;
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-family: $font-main;
+        font-size: 0.7rem;
+
+        &--icon {
+            font-size: 1.3rem;
+            color: $color-secondary3;
+        }
+    }
+}
