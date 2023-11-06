@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Landing from './components/Landing';
 //import NotFoundPage from './NotFoundPage';
 import './styles/App.scss';
+import route from './images/route-white.png';
 
 function App() {
   return (
@@ -36,6 +37,12 @@ function App() {
                 </section>
                 <section className="section">
                   <div className="section__container">
+                    <div className="section__container--projects">
+                      <div className="section__container--project"></div>
+                      <div className="section__container--project"></div>
+                      <div className="section__container--project"></div>
+                    </div>
+
                     <h2 className="section__container--title">Projects</h2>
                     <p className="section__container--text">
                       Ipsum praesentium similique ratione laborum nostrum
@@ -47,6 +54,12 @@ function App() {
                 </section>
                 <section className="section">
                   <div className="section__container">
+                    <img
+                      src={route}
+                      alt=""
+                      className="section__container--img"
+                    />
+
                     <h2 className="section__container--title">
                       My profesional journey
                     </h2>
@@ -70,7 +83,8 @@ function App() {
                         name="name"
                         id="name"
                         placeholder="Paquita Salas"
-                        className="form__input"
+                        className="form__field"
+                        required
                       />
                       <label htmlFor="email" className="form__label">
                         Email
@@ -80,7 +94,8 @@ function App() {
                         name="email"
                         id="email"
                         placeholder="paquita@psmanagemenet.com"
-                        className="form__input"
+                        className="form__field"
+                        required
                       />
                       <label htmlFor="message" className="form__label">
                         Message
@@ -90,6 +105,12 @@ function App() {
                         name="message"
                         placeholder="Your message"
                         className="form__textarea"
+                        required
+                      />
+                      <input
+                        type="submit"
+                        value="Submit"
+                        className="form__button"
                       />
                     </form>
                   </div>
