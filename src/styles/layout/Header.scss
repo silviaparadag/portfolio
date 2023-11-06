@@ -1,11 +1,11 @@
 @import '../core/variables';
 
 .header {
-    padding: 10px 10px 10px;
+    padding: 10px 40px;
     display: flex;
-    justify-content: center;
-
-
+    justify-content: space-between;
+    font-family: $font-main2;
+    color: $color-gray-ultralight;
     // &__title {
     //     color: $color-primary3;
     //     font-family: $font-main2;
@@ -13,22 +13,21 @@
     // }
 
     &__logo {
-        max-height: 50px;
+        max-height: 30px;
         margin: 10px 0;
+
     }
 }
 
-.container {
-    //max-width: 1200px;
-    width: auto;
-    padding: 0 40px 0;
-    font-family: $font-main2;
-    background-color: $color-gray-dark;
-    color: $color-gray-ultralight;
-    display: flex;
-    justify-content: space-between;
+// .container {
+//     max-width: 1200px;
+//     //width: auto;
+//     padding: 0 40px 0;
+//     background-color: $color-primary2;
+//     display: flex;
+//     justify-content: space-between;
 
-}
+// }
 
 .nav {
     margin: 10px 0;
@@ -38,13 +37,15 @@
 
     &__link {
         color: white;
+        text-decoration: none;
 
         &--button {
             margin: 10px 0 10px 10px;
-            padding: 10px 0;
+            padding: 10px 10px;
             border-radius: 10px;
             background-color: red;
             color: $color-primary;
+            text-decoration: none;
         }
 
     }

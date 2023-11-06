@@ -6,45 +6,47 @@
 
 
 .App {
-  height: 100%;
-  background-image: linear-gradient(to bottom, #f0f7d467 25%, #f0f7d467), url("../images/lime.jpeg");
+  //width: 100%;
+  background-color: $color-primary2;
+  font-family: $font-main2;
+  //background-image: linear-gradient(to bottom, #f0f7d467 25%, #f0f7d467), url("../images/lime.jpeg");
 }
 
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+// // #root {
+// //   //max-width: 1280px;
+// //   margin: 0 auto;
+// //   padding: 2rem;
+// //   text-align: center;
+// // }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
+// .logo {
+//   height: 6em;
+//   padding: 1.5em;
+//   will-change: filter;
+//   transition: filter 300ms;
+// }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
+// .logo:hover {
+//   filter: drop-shadow(0 0 2em #646cffaa);
+// }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+// .logo.react:hover {
+//   filter: drop-shadow(0 0 2em #61dafbaa);
+// }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+// @keyframes logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
 
-  to {
-    transform: rotate(360deg);
-  }
-}
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+// @media (prefers-reduced-motion: no-preference) {
+//   a:nth-of-type(2) .logo {
+//     animation: logo-spin infinite 20s linear;
+//   }
+// }
