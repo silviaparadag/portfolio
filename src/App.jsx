@@ -19,68 +19,80 @@ function App() {
               <Header />
               <main className="main">
                 <section className="hero">
-                  <h1 className="hero__title">Introducing Silvia</h1>
-                  <div className="hero__subtitle">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+                  <div className="hero__container">
+                    <h1 className="hero__container--title">
+                      Introducing Silvia
+                    </h1>
+                    <div className="hero__container--subtitle">
+                      Jr. Frontend Developer & Architect{' '}
+                    </div>
+                    <p className="hero__container--text">
+                      Ipsum praesentium similique ratione laborum nostrum
+                      laudantium, assumenda optio consequatur neque provident
+                      dolore libero atque, molestias exercitationem tempora
+                      consequuntur repellat magnam nisi!
+                    </p>
                   </div>
-                  <p className="hero__text">
-                    Ipsum praesentium similique ratione laborum nostrum
-                    laudantium, assumenda optio consequatur neque provident
-                    dolore libero atque, molestias exercitationem tempora
-                    consequuntur repellat magnam nisi!
-                  </p>
                 </section>
                 <section className="section">
-                  <h2 className="section__title">Projects</h2>
-                  <p className="section__text">
-                    Ipsum praesentium similique ratione laborum nostrum
-                    laudantium, assumenda optio consequatur neque provident
-                    dolore libero atque, molestias exercitationem tempora
-                    consequuntur repellat magnam nisi!
-                  </p>
+                  <div className="section__container">
+                    <h2 className="section__container--title">Projects</h2>
+                    <p className="section__container--text">
+                      Ipsum praesentium similique ratione laborum nostrum
+                      laudantium, assumenda optio consequatur neque provident
+                      dolore libero atque, molestias exercitationem tempora
+                      consequuntur repellat magnam nisi!
+                    </p>
+                  </div>
                 </section>
                 <section className="section">
-                  <h2 className="section__title">My profesional journey</h2>
-                  <p className="section__text">
-                    Ipsum praesentium similique ratione laborum nostrum
-                    laudantium, assumenda optio consequatur neque provident
-                    dolore libero atque, molestias exercitationem tempora
-                    consequuntur repellat magnam nisi!
-                  </p>
+                  <div className="section__container">
+                    <h2 className="section__container--title">
+                      My profesional journey
+                    </h2>
+                    <p className="section__container--text">
+                      Ipsum praesentium similique ratione laborum nostrum
+                      laudantium, assumenda optio consequatur neque provident
+                      dolore libero atque, molestias exercitationem tempora
+                      consequuntur repellat magnam nisi!
+                    </p>
+                  </div>
                 </section>
                 <section className="section">
-                  <h2 className="section__title">Contact me</h2>
-                  <form className="form" action="">
-                    <label htmlFor="name" className="form__label">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Paquita Salas"
-                      className="form__input"
-                    />
-                    <label htmlFor="email" className="form__label">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="paquita@psmanagemenet.com"
-                      className="form__input"
-                    />
-                    <label htmlFor="message" className="form__label">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      placeholder="Your message"
-                      className="form__textarea"
-                    />
-                  </form>
+                  <div className="section__container">
+                    <h2 className="section__container--title">Contact me</h2>
+                    <form className="form" action="">
+                      <label htmlFor="name" className="form__label">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Paquita Salas"
+                        className="form__input"
+                      />
+                      <label htmlFor="email" className="form__label">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="paquita@psmanagemenet.com"
+                        className="form__input"
+                      />
+                      <label htmlFor="message" className="form__label">
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Your message"
+                        className="form__textarea"
+                      />
+                    </form>
+                  </div>
                 </section>
               </main>
             </div>
