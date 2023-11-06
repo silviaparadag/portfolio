@@ -1,8 +1,6 @@
 import { useState } from 'react';
 //import { useLocation, matchPath } from 'react-router';
 import { Routes, Route } from 'react-router-dom';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Landing from './components/Landing';
@@ -10,8 +8,6 @@ import Landing from './components/Landing';
 import './styles/App.scss';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Routes>
@@ -22,30 +18,70 @@ function App() {
             <div className="App">
               <Header />
               <main className="main">
-                <div>
-                  <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                  </a>
-                  <a href="https://react.dev" target="_blank" rel="noreferrer">
-                    <img
-                      src={reactLogo}
-                      className="logo react"
-                      alt="React logo"
-                    />
-                  </a>
-                </div>
-                <h1>Vite + React</h1>
-                <div className="card">
-                  <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                  </button>
-                  <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
+                <section className="hero">
+                  <h1 className="hero__title">Introducing Silvia</h1>
+                  <div className="hero__subtitle">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+                  </div>
+                  <p className="hero__text">
+                    Ipsum praesentium similique ratione laborum nostrum
+                    laudantium, assumenda optio consequatur neque provident
+                    dolore libero atque, molestias exercitationem tempora
+                    consequuntur repellat magnam nisi!
                   </p>
-                </div>
-                <p className="read-the-docs">
-                  Click on the Vite and React logos to learn more
-                </p>
+                </section>
+                <section className="section">
+                  <h2 className="section__title">Projects</h2>
+                  <p className="section__text">
+                    Ipsum praesentium similique ratione laborum nostrum
+                    laudantium, assumenda optio consequatur neque provident
+                    dolore libero atque, molestias exercitationem tempora
+                    consequuntur repellat magnam nisi!
+                  </p>
+                </section>
+                <section className="section">
+                  <h2 className="section__title">My profesional journey</h2>
+                  <p className="section__text">
+                    Ipsum praesentium similique ratione laborum nostrum
+                    laudantium, assumenda optio consequatur neque provident
+                    dolore libero atque, molestias exercitationem tempora
+                    consequuntur repellat magnam nisi!
+                  </p>
+                </section>
+                <section className="section">
+                  <h2 className="section__title">Contact me</h2>
+                  <form className="form" action="">
+                    <label htmlFor="name" className="form__label">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Paquita Salas"
+                      className="form__input"
+                    />
+                    <label htmlFor="email" className="form__label">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="paquita@psmanagemenet.com"
+                      className="form__input"
+                    />
+                    <label htmlFor="message" className="form__label">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Your message"
+                      className="form__textarea"
+                    />
+                  </form>
+                </section>
               </main>
             </div>
           }
