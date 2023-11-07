@@ -9,7 +9,7 @@ const Header = () => {
       </a>
       <div className="container"></div>
       <nav className="nav">
-        <a href="#about-me" className="nav__link">
+        <a href="#aboutme" className="nav__link">
           About me
         </a>
         <a href="#projects" className="nav__link">
@@ -21,7 +21,7 @@ const Header = () => {
         <a href="#contact" className="nav__link--button">
           Contact
         </a>
-        {/* */}
+        {/* Here, go to form in homepage, not in a new page*/}
       </nav>
     </header>
   );

@@ -1,6 +1,6 @@
 import '../styles/layout/Main.scss';
 
-const Contact = () => {
+const HomeContact = () => {
   return (
     <>
       <section className="section">
@@ -47,4 +47,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default HomeContact;
