@@ -15,7 +15,7 @@ const Header = ({ scrollToContact }) => {
       <a to="/">
         <img src={logo} alt="Silvia Logo" className="header__logo" />
       </a>
-      <div className="container"></div>
+      {/* <div className="container"></div> */}
       <nav className="nav">
         <a href="#aboutme" className="nav__link">
           About me
