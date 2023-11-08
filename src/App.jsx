@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 //import { useLocation, matchPath } from 'react-router';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -11,14 +11,27 @@ import Landing from './components/Landing';
 import AboutMe from './components/About';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
+import dataApi from './services/database';
+
 //import NotFoundPage from './NotFoundPage';
 import './styles/App.scss';
 
 function App() {
+  const [projectsList, setProjectsList] = useState([]);
+
   const contactRef = useRef();
   const scrollToContact = () => {
     contactRef.current.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    dataApi().then((data) => {
+      console.log(data.projects);
+      setProjectsList(data.projects);
+    });
+  }, []);
+
+  console.log(projectsList);
   return (
     <>
       <Routes>
