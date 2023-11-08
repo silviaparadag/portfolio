@@ -5,7 +5,7 @@ const HomeResume = () => {
   return (
     <>
       {' '}
-      <section className="section">
+      <section className="section" id="cv">
         <div className="section__container">
           <img src={route} alt="" className="section__container--img" />
 

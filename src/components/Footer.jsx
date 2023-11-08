@@ -2,7 +2,7 @@ import '../styles/layout/Footer.scss';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer ">
       <span className="footer__text">
         ©
         <a
