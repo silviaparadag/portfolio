@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 //import { useLocation, matchPath } from 'react-router';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -15,6 +15,10 @@ import Resume from './components/Resume';
 import './styles/App.scss';
 
 function App() {
+  const contactRef = useRef();
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <>
       <Routes>
@@ -23,12 +27,12 @@ function App() {
           path="/Home"
           element={
             <div className="App">
-              <Header />
+              <Header scrollToContact={scrollToContact} />
               <main className="main">
                 <HomeHero />
                 <HomeProjects />
                 <HomeResume />
-                <HomeContact />
+                <HomeContact contactRef={contactRef} />
               </main>
             </div>
           }
@@ -36,6 +40,7 @@ function App() {
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<HomeContact />} />
         {/* <Route
           path="/project/:id"
           element={

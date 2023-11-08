@@ -1,9 +1,10 @@
 import '../styles/layout/Main.scss';
+import PropTypes from 'prop-types';
 
-const HomeContact = () => {
+const HomeContact = ({ contactRef }) => {
   return (
     <>
-      <section className="section">
+      <section className="section" ref={contactRef}>
         <div className="section__container">
           <h2 className="section__container--title">Contact me</h2>
           <form className="form" action="">
@@ -48,3 +49,7 @@ const HomeContact = () => {
 };
 
 export default HomeContact;
+
+HomeContact.propTypes = {
+  contactRef: PropTypes.func.isRequired,
+};
