@@ -4,7 +4,7 @@
 
 Hi 👋🏻!
 
-This is my portfolio repository 👩🏻‍💻 
+This is my portfolio repository, but please note that it is still under construction. 👩🏻‍💻 
 
 ## 🎲 | Getting started
 
