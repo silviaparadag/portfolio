@@ -1,20 +1,17 @@
 @import '../core/variables.scss';
 
-.main {
-    //background-color: $color-secondary2;
+.mainProjects {
     color: $color-primary;
-    //height: 80vh;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.hero {
+.heroProjects {
     padding: 218px 0 64px;
     display: flex;
     align-items: left;
     justify-content: center;
-    flex-direction: column;
     gap: 1rem;
 
 
@@ -46,7 +43,7 @@
 
 }
 
-.section {
+.sectionProjects {
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -82,42 +79,52 @@
 
         &--projects {
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
             padding: 1rem;
         }
 
         &--project {
-            box-shadow: 1px 1px 5px red;
-            background-color: red;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+            color: black;
+            padding: 10px;
+            box-shadow: 1px 1px 5px gray;
+            background-color: white;
+            width: 120px;
+            height: 300px;
+        }
+
+        &--project:hover {
+            filter: sepia(100%);
         }
     }
 }
 
-.project {
-    &__avatar {
-
+.projectCard {
+    &__img {
         width: 100px;
         height: 100px;
         border-radius: 50%;
         filter: saturate(0%);
     }
 
-    &__avatar:hover {
-        box-shadow: 3px 3px 5px white;
-        filter: sepia(100%);
-    }
+
 }
 
-.form {
+.filters {
+    padding-right: 40px;
     width: 100%;
     min-width: 300px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
 
     &__label {
         padding: 0 0 5px 10px;
@@ -133,24 +140,10 @@
         margin-bottom: 1rem;
     }
 
-    &__textarea {
+    &__select {
         width: 100%;
         padding: 5px 10px;
         border-radius: 5px;
-        margin-bottom: 1rem;
     }
 
-    &__button {
-        padding: 10px 45px;
-        border-radius: 5px;
-        border: none;
-        background-color: red;
-        color: $color-primary;
-        text-decoration: none;
-        align-self: flex-end;
-    }
-
-    //when add media queries not->ice
-    // &__button:mobile {
-    // width: 100%;
 }

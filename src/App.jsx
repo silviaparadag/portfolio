@@ -24,45 +24,61 @@ function App() {
     contactRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  /* */
   useEffect(() => {
     dataApi().then((data) => {
-      console.log(data.projects);
-      setProjectsList(data.projects);
+      const result = data.projects.map((eachProject) => eachProject);
+      setProjectsList(result);
     });
   }, []);
-
   console.log(projectsList);
+
+  const allProjectsList = projectsList.map((eachProject) => eachProject);
+  console.log(allProjectsList);
+
+  const top3Projects = projectsList
+    .sort((a, b) => b.score - a.score)
+    .splice(0, 3);
+  console.log(top3Projects);
+
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Landing />}></Route>
-        <Route
-          path="/Home"
-          element={
-            <div className="App">
-              <Header scrollToContact={scrollToContact} />
-              <main className="main">
-                <HomeHero />
-                <HomeProjects />
-                <HomeResume />
-                <HomeContact contactRef={contactRef} />
-              </main>
-            </div>
-          }
-        />
-        <Route path="/aboutme" element={<AboutMe />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/contact" element={<HomeContact />} />
-        {/* <Route
+      {' '}
+      <div className="App">
+        <Header scrollToContact={scrollToContact} />
+        <Routes>
+          <Route path="/" element={<Landing />}></Route>
+          <Route
+            path="/Home"
+            element={
+              <>
+                {' '}
+                <main className="main">
+                  <HomeHero />
+                  <HomeProjects top3Projects={top3Projects} />
+                  <HomeResume />
+                  <HomeContact contactRef={contactRef} />
+                </main>
+              </>
+            }
+          />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route
+            path="/projects"
+            element={<Projects allProjectsList={allProjectsList} />}
+          />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<HomeContact />} />
+          {/* <Route
           path="/project/:id"
           element={
             < />
           }
         /> */}
-        {/* <Route path="*" element={<NotFoundPage />} /> */}
-      </Routes>
-      <Footer />
+          {/* <Route path="*" element={<NotFoundPage />} /> */}
+        </Routes>
+        <Footer />
+      </div>
     </>
   );
 }
