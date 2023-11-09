@@ -7,11 +7,3 @@ const getProjectsFromApi = () => {
 };
 
 export default getProjectsFromApi;
-
-/* 
-  .then((data) => {
-    const result = data.projects.map((eachProject) => eachProject);
-    console.log(result);
-    return result;
-  });
-  */

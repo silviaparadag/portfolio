@@ -33,8 +33,8 @@ function App() {
   }, []);
   console.log(projectsList);
 
-  const allProjectList = projectsList.map((eachProject) => eachProject);
-  console.log(allProjectList);
+  const allProjectsList = projectsList.map((eachProject) => eachProject);
+  console.log(allProjectsList);
 
   const top3Projects = projectsList
     .sort((a, b) => b.score - a.score)
@@ -43,35 +43,42 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Landing />}></Route>
-        <Route
-          path="/Home"
-          element={
-            <div className="App">
-              <Header scrollToContact={scrollToContact} />
-              <main className="main">
-                <HomeHero />
-                <HomeProjects top3Projects={top3Projects} />
-                <HomeResume />
-                <HomeContact contactRef={contactRef} />
-              </main>
-            </div>
-          }
-        />
-        <Route path="/aboutme" element={<AboutMe />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/contact" element={<HomeContact />} />
-        {/* <Route
+      {' '}
+      <div className="App">
+        <Header scrollToContact={scrollToContact} />
+        <Routes>
+          <Route path="/" element={<Landing />}></Route>
+          <Route
+            path="/Home"
+            element={
+              <>
+                {' '}
+                <main className="main">
+                  <HomeHero />
+                  <HomeProjects top3Projects={top3Projects} />
+                  <HomeResume />
+                  <HomeContact contactRef={contactRef} />
+                </main>
+              </>
+            }
+          />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route
+            path="/projects"
+            element={<Projects allProjectsList={allProjectsList} />}
+          />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<HomeContact />} />
+          {/* <Route
           path="/project/:id"
           element={
             < />
           }
         /> */}
-        {/* <Route path="*" element={<NotFoundPage />} /> */}
-      </Routes>
-      <Footer />
+          {/* <Route path="*" element={<NotFoundPage />} /> */}
+        </Routes>
+        <Footer />
+      </div>
     </>
   );
 }
