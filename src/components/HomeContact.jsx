@@ -51,5 +51,5 @@ const HomeContact = (props) => {
 export default HomeContact;
 
 HomeContact.propTypes = {
-  contactRef: PropTypes.func.isRequired,
+  contactRef: PropTypes.object,
 };

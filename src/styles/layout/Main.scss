@@ -87,11 +87,27 @@
         }
 
         &--project {
-            background-color: red;
-            width: 100px;
-            height: 100px;
+            box-shadow: 1px 1px 5px red;
+            // background-color: red;
+            // width: 100px;
+            // height: 100px;
             border-radius: 50%;
         }
+    }
+}
+
+.project {
+    &__avatar {
+
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        filter: saturate(0%);
+    }
+
+    &__avatar:hover {
+        box-shadow: 3px 3px 5px white;
+        filter: sepia(100%);
     }
 }
 

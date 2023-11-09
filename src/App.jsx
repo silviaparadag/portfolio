@@ -24,14 +24,23 @@ function App() {
     contactRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  /* */
   useEffect(() => {
     dataApi().then((data) => {
-      console.log(data.projects);
-      setProjectsList(data.projects);
+      const result = data.projects.map((eachProject) => eachProject);
+      setProjectsList(result);
     });
   }, []);
-
   console.log(projectsList);
+
+  const allProjectList = projectsList.map((eachProject) => eachProject);
+  console.log(allProjectList);
+
+  const top3Projects = projectsList
+    .sort((a, b) => b.score - a.score)
+    .splice(0, 3);
+  console.log(top3Projects);
+
   return (
     <>
       <Routes>
@@ -43,7 +52,7 @@ function App() {
               <Header scrollToContact={scrollToContact} />
               <main className="main">
                 <HomeHero />
-                <HomeProjects projectsList={projectsList} />
+                <HomeProjects top3Projects={top3Projects} />
                 <HomeResume />
                 <HomeContact contactRef={contactRef} />
               </main>
