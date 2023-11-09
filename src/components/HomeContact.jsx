@@ -1,10 +1,10 @@
 import '../styles/layout/Main.scss';
 import PropTypes from 'prop-types';
 
-const HomeContact = ({ contactRef }) => {
+const HomeContact = (props) => {
   return (
     <>
-      <section className="section" ref={contactRef}>
+      <section className="section" ref={props.contactRef}>
         <div className="section__container">
           <h2 className="section__container--title">Contact me</h2>
           <form className="form" action="">

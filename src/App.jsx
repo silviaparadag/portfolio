@@ -43,7 +43,7 @@ function App() {
               <Header scrollToContact={scrollToContact} />
               <main className="main">
                 <HomeHero />
-                <HomeProjects />
+                <HomeProjects projectsList={projectsList} />
                 <HomeResume />
                 <HomeContact contactRef={contactRef} />
               </main>
