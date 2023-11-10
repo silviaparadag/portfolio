@@ -86,15 +86,16 @@
 
         &--project {
             color: black;
-            padding: 10px;
+            padding: 15px 10px 10px;
             box-shadow: 1px 1px 5px gray;
             background-color: white;
+            filter: saturate(0%);
             width: 120px;
             height: 300px;
         }
 
         &--project:hover {
-            filter: sepia(100%);
+            filter: saturate(100%);
         }
     }
 }
@@ -104,7 +105,46 @@
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        filter: saturate(0%);
+    }
+
+    &__img:hover {
+        border: 1px solid #757575;
+    }
+
+    &__info {
+        padding-top: 5px;
+        display: flex;
+        flex-direction: column;
+
+        &--title {
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 10px 0;
+            height: 70px;
+        }
+
+        &--text1 {
+            height: 70px;
+            padding-bottom: 10px;
+            color: red;
+        }
+
+        &--text2 {
+            text-align: right;
+            color: $color-secondary2;
+            font-style: italic;
+            font-size: 0.45rem;
+        }
+    }
+
+    &__icons {
+        padding-top: 10px;
+        color: $color-primary2;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+
     }
 
 
