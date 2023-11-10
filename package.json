@@ -1,6 +1,6 @@
 {
-  "name": "starter-kit-vite-react",
-  "homepage": "./",
+  "name": "portfolio",
+  "homepage": "https://silviaparadag.github.io/portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,9 +12,9 @@
     "deploy": "gh-pages -d dist",
     "githubpages": "rm -rf dist && rm -rf docs && npm run build && mv dist docs && git add docs/* && git commit -m \"Publish in GitHub Pages\" && git push"
   },
-"dependencies": {
-    "prop-types": "^15.8.1",
+  "dependencies": {
     "node-sass": "^9.0.0",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0"
