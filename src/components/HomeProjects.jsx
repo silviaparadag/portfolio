@@ -22,7 +22,10 @@ const HomeProjects = (props) => {
       <section className="section">
         <div className="section__container">
           <ul className="section__container--projects">{homeProjects}</ul>
-          <h2 className="section__container--title">Featured projects</h2>
+          {/* <h2 className="section__container--title">Featured projects</h2> */}
+          <a href="#projects" className="section__container--link">
+            <h2 className="section__container--title">Featured projects</h2>
+          </a>
           <p className="section__container--text">
             Explore a portfolio of my technological works, where you will
             discover the main projects I have done during the last year.

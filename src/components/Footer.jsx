@@ -5,13 +5,13 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__grid">
-        <a to="/">
+        <a href="/">
           <img src={logo} alt="Silvia Logo" className="header__logo" />
         </a>
         <div></div>
       </div>
-      <div className="footer__footer">
-        {/* <p>©</p>
+
+      {/* <p>©</p>
         <a
           href="https://www.linkedin.com/in/silviaparadag/"
           target="_blank"
@@ -21,7 +21,9 @@ const Footer = () => {
           {' '}
           Silvia Parada |
         </a> */}
-        <p className="footer__text">© Silvia Parada | 2023</p>
+      <div className="footer__text">
+        <p className="footer__text--p">© Silvia Parada | 2023</p>
+        <p className="footer__text--italic">All rights reserved</p>
       </div>
     </footer>
   );

@@ -5,27 +5,36 @@
     color: $color-secondary4;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 10px 40px;
     //width: 100%;
-    // height: 60px;
+    //height: 60px;
     //left: 0px;
     //bottom: 0px;
     font-family: $font-main2;
     font-size: .8rem;
+
     //background-image: linear-gradient(to bottom, #f0f7d467 25%, #f0f7d467), url("../images/lime.jpeg");
+    &__grid {
+        display: flex;
+        justify-content: center;
+
+    }
 
     &__text {
-        color: $color-gray-ultralight;
+        color: $color-secondary;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 10px 0;
+        font-size: .65rem;
+
+        &--italic {
+            font-style: italic;
+        }
 
         &--link {
             color: $color-gray-ultralight;
             text-decoration: none;
         }
-    }
-
-    &__footer {
-        display: flex;
     }
 }
