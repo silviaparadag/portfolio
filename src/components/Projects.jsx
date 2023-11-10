@@ -51,7 +51,7 @@ const Projects = (props) => {
     <main className="mainProjects">
       <section className="heroProjects">
         <div className="heroProjects__container">
-          <h2 className="heroProjects__container--title">Projects Page</h2>
+          <h2 className="heroProjects__container--title">Projects</h2>
           <p className="heroProjects__container--text">
             Explore a portfolio of my technological works, where you will
             discover the main projects I have done during the last year.

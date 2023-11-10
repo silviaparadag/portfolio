@@ -12,7 +12,7 @@ const Header = ({ scrollToContact }) => {
 
   return (
     <header className="header">
-      <a to="/">
+      <a href="/">
         <img src={logo} alt="Silvia Logo" className="header__logo" />
       </a>
       {/* <div className="container"></div> */}
