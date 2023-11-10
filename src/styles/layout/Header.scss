@@ -1,4 +1,6 @@
 @import '../core/variables';
+@import '../core/reset';
+@import '../core/mixins';
 
 .header {
     padding: 10px 40px;
@@ -6,6 +8,8 @@
     justify-content: space-between;
     font-family: $font-main2;
     color: $color-gray-ultralight;
+    background-color: $color-primary2;
+    font-family: $font-main2;
     // &__title {
     //     color: $color-primary3;
     //     font-family: $font-main2;

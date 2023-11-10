@@ -1,4 +1,6 @@
 @import './core/reset';
+@import './core/variables';
+@import './core/mixins';
 @import './layout/Header.scss';
 @import './layout/Main';
 @import './layout/Landing';
