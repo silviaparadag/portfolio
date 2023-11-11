@@ -1,4 +1,4 @@
-import logo from '../images/faviconSP.png';
+// import logo from '../images/faviconSP.png';
 import { Link } from 'react-router-dom';
 import '../styles/layout/Landing.scss';
 
@@ -10,8 +10,8 @@ const Landing = () => {
         {/* <span className="landing__title--strong">Silvia Parada</span> */}
       </p>
       <Link className="landing__btn" to="/Home">
-        {/* <img src={logo} alt="Silvia Parada Logo" className="landing__img" /> */}
-        <p className="landing__btn--text">Enter</p>
+        {/* <img src={logo} alt="Silvia Parada Logo" className="landing__img" /> <p className="landing__btn--text">Enter</p>*/}
+        <i className="fa-solid fa-arrow-right landing__btn--text"></i>
       </Link>
     </div>
   );

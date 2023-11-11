@@ -4,7 +4,9 @@
 .landing {
     height: 90vh;
     padding: 60px 20px 0;
-    background-image: linear-gradient(to bottom, #f0f7d467 25%, #f0f7d467), url("../images/lime.jpeg");
+    font-family: $font-main2;
+    color: $color-primary;
+    // background-image: linear-gradient(to bottom, #f0f7d467 25%, #f0f7d467), url("../images/lime.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -15,8 +17,7 @@
 
     &__title {
         padding: 30px;
-        font-family: $font-secondary3;
-        color: $color-secondary;
+        font-family: $font-secondary;
         font-size: 2.75rem;
         text-align: center;
         display: flex;
@@ -33,31 +34,30 @@
     }
 
     &__btn {
-        background-color: $color-secondary3;
+        background-color: $color-primary;
         padding: 15px;
-        height: 100px;
-        width: 100px;
+        height: 50px;
+        width: 50px;
         border-radius: 50px;
         text-decoration: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: $font-secondary3;
+        font-family: $font-main2;
         font-size: 2rem;
         text-align: center;
 
         &--text {
             padding: 40px 0;
-            font-size: 1rem;
-            color: $color-secondary ;
-            text-shadow: 1px 1px 2px $color-secondary;
-
+            font-size: 1.35rem;
+            color: $color-primary2 ;
+            text-shadow: 1px 1px 2px $color-primary3;
         }
 
         &:hover {
             color: $color-secondary;
             font-size: 2.2rem;
-            box-shadow: 0 4px 10px $color-secondary;
+            box-shadow: 0 4px 10px $color-primary3;
             transition: all 0.2s ease;
         }
     }
