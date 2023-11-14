@@ -3,40 +3,32 @@ import '../styles/layout/Header.scss';
 import PropTypes from 'prop-types';
 import logo from '../images/s-p_logo.svg';
 
-const Header = ({ scrollToContact }) => {
-  // const scrollToContact = () => {
-  //   // ev.current.scrollIntoView({ behavior: 'smooth' });
-  //   const contactSection = document.getElementById('contact');
-  //   contactSection.scrollIntoView({ behavior: 'smooth' });
-  // };
-
+const Header = (props) => {
   return (
     <header className="header">
-      <a href="/portfolio/">
-        <img src={logo} alt="Silvia Logo" className="header__logo" />
-      </a>
-      {/* <div className="container"></div> */}
-      <nav className="nav">
-        <a href="#aboutme" className="nav__link">
-          About me
+      <>
+        <a href="/portfolio/">
+          <img src={logo} alt="Silvia Logo" className="header__logo" />
         </a>
-        <a href="#projects" className="nav__link">
-          Projects
-        </a>
-        <a href="#cv" className="nav__link">
-          CV | Resume
-        </a>
-        {/* <a href="#contact" className="nav__link--button">
-          Contact
-        </a> */}
-        <button
-          onClick={scrollToContact}
-          // to="/contact"
-          className="nav__link--button"
-        >
-          Contact
-        </button>
-      </nav>
+        <nav className="nav">
+          <a href="#home" className="nav__link">
+            Home
+          </a>
+          <a href="#aboutme" className="nav__link">
+            About me
+          </a>
+          <a href="#projects" className="nav__link">
+            Projects
+          </a>
+          <a href="#cv" className="nav__link">
+            CV | Resume
+          </a>
+
+          <button onClick={props.scrollToContact} className="nav__link--button">
+            Contact
+          </button>
+        </nav>
+      </>
     </header>
   );
 };
@@ -45,4 +37,5 @@ export default Header;
 
 Header.propTypes = {
   scrollToContact: PropTypes.func.isRequired,
+  isLandingPage: PropTypes.bool.isRequired,
 };

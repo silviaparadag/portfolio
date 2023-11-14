@@ -13,21 +13,26 @@ import Projects from './components/Projects';
 import Resume from './components/Resume';
 import dataApi from './services/database';
 //import NotFoundPage from './NotFoundPage';
+import Loader from './components/Loader';
 import './styles/App.scss';
 
 function App() {
   const [projectsList, setProjectsList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  // const [forceRender, setForceRender] = useState(false);
+  // const [imagesLoaded, setImagesLoaded] = useState(0);
 
   const contactRef = useRef();
   const scrollToContact = () => {
     contactRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  /* */
+  /* setIsLoading(true);*/
   useEffect(() => {
     dataApi().then((data) => {
       const result = data.projects.map((eachProject) => eachProject);
       setProjectsList(result);
+      setIsLoading(true);
     });
   }, []);
   console.log(projectsList);
@@ -42,11 +47,18 @@ function App() {
 
   const location = useLocation();
   const isLandingPage = location.pathname === '/';
+  if (!isLoading) {
+    return <Loader />;
+  }
 
   return (
     <>
       {!isLandingPage && <Header scrollToContact={scrollToContact} />}
       <div className="App">
+        {/* <Header
+          // isLandingPage={isLandingPage}
+          scrollToContact={scrollToContact}
+        /> */}
         <Routes>
           <Route path="/" element={<Landing />}></Route>
           <Route
@@ -56,7 +68,10 @@ function App() {
                 {' '}
                 <main className="main">
                   <HomeHero />
-                  <HomeProjects top3Projects={top3Projects} />
+                  <HomeProjects
+                    top3Projects={top3Projects}
+                    // isLoading={isLoading}
+                  />
                   <HomeResume />
                   <HomeContact contactRef={contactRef} />
                 </main>

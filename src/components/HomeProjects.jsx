@@ -1,3 +1,4 @@
+//import Loader from './Loader';
 import '../styles/layout/Main.scss';
 import PropTypes from 'prop-types';
 
@@ -7,7 +8,7 @@ const HomeProjects = (props) => {
       <li key={index} className="section__container--project">
         <article className="project">
           <img
-            src={eachProject.avatar}
+            src={`https://silviaparadag.github.io/api-sp/projects-portfolio/avatars/${eachProject.avatar}`}
             alt={eachProject.title}
             className="project__avatar"
           />
@@ -22,7 +23,6 @@ const HomeProjects = (props) => {
       <section className="section">
         <div className="section__container">
           <ul className="section__container--projects">{homeProjects}</ul>
-          {/* <h2 className="section__container--title">Featured projects</h2> */}
           <a href="#projects" className="section__container--link">
             <h2 className="section__container--title">Featured projects</h2>
           </a>
@@ -40,6 +40,10 @@ export default HomeProjects;
 
 HomeProjects.propTypes = {
   top3Projects: PropTypes.array.isRequired,
+  //isLoading: PropTypes.bool.isRequired,
+  // allProjectsList: PropTypes.array.isRequired,
+  // handleImageLoad: PropTypes.func.isRequired,
+  // imagesLoaded: PropTypes.number.isRequired,
 };
 
 /* */
