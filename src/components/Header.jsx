@@ -7,13 +7,13 @@ const Header = (props) => {
   return (
     <header className="header">
       <>
-        <a href="/portfolio/">
+        <a href="/">
           <img src={logo} alt="Silvia Logo" className="header__logo" />
         </a>
         <nav className="nav">
-          <a href="#home" className="nav__link">
+          {/* <a href="#home" className="nav__link">
             Home
-          </a>
+          </a> */}
           <a href="#aboutme" className="nav__link">
             About me
           </a>

@@ -45,24 +45,25 @@ function App() {
     .splice(0, 3);
   console.log(top3Projects);
 
-  const location = useLocation();
+  /*  const location = useLocation();
   const isLandingPage = location.pathname === '/';
   if (!isLoading) {
     return <Loader />;
   }
+ */
 
   return (
     <>
-      {!isLandingPage && <Header scrollToContact={scrollToContact} />}
+      {/* {!isLandingPage && <Header scrollToContact={scrollToContact} />} */}
       <div className="App">
-        {/* <Header
+        <Header
           // isLandingPage={isLandingPage}
           scrollToContact={scrollToContact}
-        /> */}
+        />
         <Routes>
-          <Route path="/" element={<Landing />}></Route>
+          {/* <Route path="/" element={<Landing />}></Route> */}
           <Route
-            path="/Home"
+            path="/"
             element={
               <>
                 {' '}
