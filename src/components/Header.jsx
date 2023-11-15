@@ -8,7 +8,7 @@ const Header = (props) => {
     <header className="header">
       <>
         <a href="/portfolio/">
-          <img src={logo} alt="Silvia Logo" className="header__logo" />
+          <img src={logo} alt="Silvia Parada Logo" className="header__logo" />
         </a>
         <nav className="nav">
           {/* <a href="#home" className="nav__link">
