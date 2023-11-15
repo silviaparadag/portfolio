@@ -7,7 +7,7 @@ const Header = (props) => {
   return (
     <header className="header">
       <>
-        <a href="/">
+        <a href="/portfolio/">
           <img src={logo} alt="Silvia Logo" className="header__logo" />
         </a>
         <nav className="nav">
@@ -21,7 +21,7 @@ const Header = (props) => {
             Projects
           </a>
           <a href="#cv" className="nav__link">
-            CV | Resume
+            CV
           </a>
 
           <button onClick={props.scrollToContact} className="nav__link--button">
