@@ -13,8 +13,8 @@
     padding: 218px 0 64px;
     display: flex;
     align-items: left;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
     gap: 1rem;
 
 
@@ -41,6 +41,17 @@
             font-size: .8rem;
             line-height: 1.4;
             max-width: 45ch;
+        }
+    }
+
+    &__container2 {
+        display: flex;
+        justify-content: center;
+        padding-right: 40px;
+        width: 50%;
+
+        &--img {
+            width: 50%;
         }
     }
 
