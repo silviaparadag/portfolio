@@ -7,7 +7,7 @@ export default defineConfig({
     outDir: 'build',
   },
   plugins: [react()],
-  base: './portfolio/',
+  base: './',
 });
 
 //base: 'https://silviaparadag.github.io/portfolio/',

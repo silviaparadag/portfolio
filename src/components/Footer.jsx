@@ -10,17 +10,6 @@ const Footer = () => {
         </a>
         <div></div>
       </div>
-
-      {/* <p>©</p>
-        <a
-          href="https://www.linkedin.com/in/silviaparadag/"
-          target="_blank"
-          rel="noreferrer"
-          className="footer__text--link"
-        >
-          {' '}
-          Silvia Parada |
-        </a> */}
       <div className="footer__text">
         <p className="footer__text--p">© Silvia Parada | 2023</p>
         <p className="footer__text--italic">All rights reserved</p>
