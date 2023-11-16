@@ -37,5 +37,5 @@ export default Header;
 
 Header.propTypes = {
   scrollToContact: PropTypes.func.isRequired,
-  isLandingPage: PropTypes.bool.isRequired,
+  //isLandingPage: PropTypes.bool.isRequired,
 };
