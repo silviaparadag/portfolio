@@ -9,6 +9,7 @@ export default defineConfig({
   },
   plugins: [react()],
   base: 'https://silviaparadag.github.io/portfolio/',
+
 });
 
 //base: 'https://silviaparadag.github.io/portfolio/',

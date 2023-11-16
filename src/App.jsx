@@ -17,6 +17,7 @@ function App() {
   const [projectsList, setProjectsList] = useState(ls.get('projects', []));
   const [searchByText, setSearchByText] = useState('');
   const [searchByTech, setSearchByTech] = useState('All');
+
   const contactRef = useRef();
   const scrollToContact = () => {
     contactRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -41,7 +42,7 @@ function App() {
     .sort((a, b) => b.score - a.score)
     .slice(0, 3);
   console.log(top3Projects);
-
+  
   const handleFilters = (varName, varValue) => {
     if (varName === 'name') {
       setSearchByText(varValue.toLowerCase());
@@ -62,7 +63,7 @@ function App() {
   const flatTechStack = techStack.flat();
   const allTechStack = [...new Set(flatTechStack)];
   console.log(allTechStack);
-
+  
   return (
     <>
       <div className="App">
