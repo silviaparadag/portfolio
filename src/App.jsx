@@ -15,7 +15,7 @@ import ls from './services/localStorage';
 import './styles/App.scss';
 
 function App() {
-  const [projectsList, setProjectsList] = useState([]);
+  const [projectsList, setProjectsList] = useState(ls.get('projects', []));
   const [searchByText, setSearchByText] = useState('');
   const [searchByTech, setSearchByTech] = useState('All');
   const contactRef = useRef();
