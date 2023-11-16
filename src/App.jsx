@@ -10,10 +10,13 @@ import AboutMe from './components/About';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 import dataApi from './services/database';
+import ls from './services/localStorage';
 import './styles/App.scss';
 
 function App() {
-  const [projectsList, setProjectsList] = useState([]);
+  const [projectsList, setProjectsList] = useState(ls.get('projects', []));
+  const [searchByText, setSearchByText] = useState('');
+  const [searchByTech, setSearchByTech] = useState('All');
 
   const contactRef = useRef();
   const scrollToContact = () => {
@@ -21,10 +24,13 @@ function App() {
   };
 
   useEffect(() => {
-    dataApi().then((data) => {
-      const result = data.projects.map((eachProject) => eachProject);
-      setProjectsList(result);
-    });
+    if (ls.get('projects', null) === null) {
+      dataApi.getProjectsFromApi().then((data) => {
+        const result = data.projects.map((eachProject) => eachProject);
+        setProjectsList(result);
+        ls.set('projects', result);
+      });
+    }
   }, []);
   console.log(projectsList);
 
@@ -32,10 +38,32 @@ function App() {
   console.log(allProjectsList);
 
   const top3Projects = projectsList
+    .slice()
     .sort((a, b) => b.score - a.score)
-    .splice(0, 3);
+    .slice(0, 3);
   console.log(top3Projects);
+  
+  const handleFilters = (varName, varValue) => {
+    if (varName === 'name') {
+      setSearchByText(varValue.toLowerCase());
+    } else if (varName === 'tech') setSearchByTech(varValue);
+  };
 
+  const filteredProjects = allProjectsList
+    .filter((eachProject) => {
+      const text = `${eachProject.title}+${eachProject.desc}`;
+      return text.toLowerCase().includes(searchByText.toLowerCase());
+    })
+    .filter((eachProject) =>
+      searchByTech === 'All' ? true : eachProject.tech.includes(searchByTech)
+    );
+  console.log(filteredProjects);
+
+  const techStack = allProjectsList.map((eachProject) => eachProject.tech);
+  const flatTechStack = techStack.flat();
+  const allTechStack = [...new Set(flatTechStack)];
+  console.log(allTechStack);
+  
   return (
     <>
       <div className="App">
@@ -57,7 +85,16 @@ function App() {
           <Route path="/aboutme" element={<AboutMe />} />
           <Route
             path="/projects"
-            element={<Projects allProjectsList={allProjectsList} />}
+            element={
+              <>
+                <Projects
+                  handleFilters={handleFilters}
+                  searchByTech={searchByTech}
+                  allTechStack={allTechStack}
+                  filteredProjects={filteredProjects}
+                />
+              </>
+            }
           />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<HomeContact />} />
