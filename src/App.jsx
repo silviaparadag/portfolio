@@ -10,7 +10,6 @@ import AboutMe from './components/About';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 import dataApi from './services/database';
-// import dataJson from './services/db.json';
 import ls from './services/localStorage';
 import './styles/App.scss';
 
@@ -23,9 +22,6 @@ function App() {
     contactRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  /*  
-
-*/
   useEffect(() => {
     if (ls.get('projects', null) === null) {
       dataApi.getProjectsFromApi().then((data) => {
@@ -41,8 +37,9 @@ function App() {
   console.log(allProjectsList);
 
   const top3Projects = projectsList
+    .slice()
     .sort((a, b) => b.score - a.score)
-    .splice(0, 3);
+    .slice(0, 3);
   console.log(top3Projects);
 
   const handleFilters = (varName, varValue) => {
