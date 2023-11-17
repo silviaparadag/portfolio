@@ -14,6 +14,7 @@
     "githubpages": "rm -rf dist && rm -rf docs && npm run build && mv dist docs && git add docs/* && git commit -m \"Publish in GitHub Pages\" && git push"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "node-sass": "^9.0.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
