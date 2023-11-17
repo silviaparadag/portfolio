@@ -110,6 +110,27 @@
             border-radius: 50%;
         }
     }
+
+    &__container2 {
+        max-width: 1200px;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 500px;
+
+        &--succeeded {
+            max-width: fit-content;
+            border-top: $color-primary4 dotted 1px;
+            border-bottom: $color-primary4 dotted 1px;
+            padding: 25px 15px 25px;
+            color: $color-primary;
+            font-size: .8rem;
+            line-height: 1.2;
+            font-style: italic;
+            text-align: center;
+        }
+    }
 }
 
 .project {
