@@ -1,10 +1,10 @@
-![Badge en Desarollo](https://img.shields.io/badge/STATUS-IN%20PROGRESS-green)
+# ![Badge en Desarollo](https://img.shields.io/badge/STATUS-IN%20PROGRESS-green)
 
 # 💫 Silvia Parada's portfolio 💫
 
 Hi 👋🏻!
 
-This is my portfolio repository, but please note that it is still under construction. 👩🏻‍💻 
+This is my portfolio repository, but please note that it is **still under construction**. 👩🏻‍💻 
 
 ## 🎲 | Getting started
 
