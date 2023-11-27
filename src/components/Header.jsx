@@ -20,7 +20,7 @@ const Header = (props) => {
           <a href="#projects" className="nav__link">
             Projects
           </a>
-          <a href="#cv" className="nav__link">
+          <a href="#resume" className="nav__link">
             CV
           </a>
 
