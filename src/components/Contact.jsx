@@ -1,17 +1,17 @@
-import '../styles/layout/Main.scss';
+import '../styles/layout/Contact.scss';
 import ContactForm from '../components/ContactForm';
 import PropTypes from 'prop-types';
 
-const HomeContact = (props) => {
+const Contact = (props) => {
   return (
-    <>
+    <main className="mainContact">
       <ContactForm contactRef={props.contactRef} />
-    </>
+    </main>
   );
 };
 
-export default HomeContact;
+export default Contact;
 
-HomeContact.propTypes = {
+Contact.propTypes = {
   contactRef: PropTypes.object,
 };
