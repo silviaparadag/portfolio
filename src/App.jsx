@@ -1,10 +1,12 @@
 import { useRef, useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+//import { animateScroll as scroll } from 'react-scroll';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomeHero from './components/HomeHero';
 import HomeProjects from './components/HomeProjects';
 import HomeContact from './components/HomeContact';
+import Contact from './components/Contact';
 import HomeResume from './components/HomeResume';
 import AboutMe from './components/About';
 import Projects from './components/Projects';
@@ -19,8 +21,17 @@ function App() {
   const [searchByTech, setSearchByTech] = useState('All');
 
   const contactRef = useRef();
+  // const scrollToContact = () => {
+  //   contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  // };
   const scrollToContact = () => {
-    contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (contactRef.current) {
+      const offsetTop = contactRef.current.offsetTop;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
+    }
   };
 
   useEffect(() => {
@@ -42,7 +53,7 @@ function App() {
     .sort((a, b) => b.score - a.score)
     .slice(0, 3);
   console.log(top3Projects);
-  
+
   const handleFilters = (varName, varValue) => {
     if (varName === 'name') {
       setSearchByText(varValue.toLowerCase());
@@ -63,11 +74,14 @@ function App() {
   const flatTechStack = techStack.flat();
   const allTechStack = [...new Set(flatTechStack)];
   console.log(allTechStack);
-  
+
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   return (
     <>
       <div className="App">
-        <Header scrollToContact={scrollToContact} />
+        <Header scrollToContact={scrollToContact} isHomePage={isHomePage} />
         <Routes>
           <Route
             path="/"
@@ -97,7 +111,7 @@ function App() {
             }
           />
           <Route path="/resume" element={<Resume />} />
-          <Route path="/contact" element={<HomeContact />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

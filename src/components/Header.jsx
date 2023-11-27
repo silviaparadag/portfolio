@@ -4,6 +4,16 @@ import PropTypes from 'prop-types';
 import logo from '../images/s-p_logo.svg';
 
 const Header = (props) => {
+  const contactButton = props.isHomePage ? (
+    <button onClick={props.scrollToContact} className="nav__link--button">
+      Contact
+    </button>
+  ) : (
+    <a href="#contact" className="nav__link--button">
+      Contact
+    </a>
+  );
+
   return (
     <header className="header">
       <>
@@ -11,22 +21,16 @@ const Header = (props) => {
           <img src={logo} alt="Silvia Parada Logo" className="header__logo" />
         </a>
         <nav className="nav">
-          {/* <a href="#home" className="nav__link">
-            Home
-          </a> */}
           <a href="#aboutme" className="nav__link">
             About me
           </a>
           <a href="#projects" className="nav__link">
             Projects
           </a>
-          <a href="#cv" className="nav__link">
+          <a href="#resume" className="nav__link">
             CV
           </a>
-
-          <button onClick={props.scrollToContact} className="nav__link--button">
-            Contact
-          </button>
+          {contactButton}
         </nav>
       </>
     </header>
@@ -37,5 +41,5 @@ export default Header;
 
 Header.propTypes = {
   scrollToContact: PropTypes.func.isRequired,
-  //isLandingPage: PropTypes.bool.isRequired,
+  isHomePage: PropTypes.bool.isRequired,
 };
