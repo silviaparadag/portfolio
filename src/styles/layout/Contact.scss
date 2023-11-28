@@ -3,53 +3,46 @@
 
 
 .mainContact {
-    margin: auto;
+    //margin: auto;
+    height: 80vh;
     color: $color-primary;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
 }
 
-.form {
-    width: 100%;
-    min-width: 300px;
-    max-width: 600px;
+.sectionContact {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 4rem;
 
-    &__label {
-        padding: 0 0 5px 10px;
-        font-size: 12px;
-        font-weight: 500;
-        text-align: left;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--title {
+            padding: 20px 0 5px;
+            font-family: $font-secondary;
+            font-size: 2rem;
+        }
+
+        &--subtitle {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.4;
+            padding-bottom: 0.8rem;
+        }
+
+        &--text {
+            padding-top: 1.25rem;
+            text-align: center;
+            max-width: 43ch;
+            font-size: .8rem;
+            line-height: 1.4;
+        }
     }
-
-    &__field {
-        width: 100%;
-        padding: 5px 10px;
-        border-radius: 5px;
-        margin-bottom: 1rem;
-    }
-
-    &__textarea {
-        width: 100%;
-        padding: 5px 10px;
-        border-radius: 5px;
-        margin-bottom: 1rem;
-    }
-
-    &__button {
-        padding: 10px 45px;
-        border-radius: 5px;
-        border: none;
-        background-color: red;
-        color: $color-primary;
-        text-decoration: none;
-        align-self: flex-end;
-    }
-
-    //when add media queries not->ice
-    // &__button:mobile {
-    // width: 100%;
 }

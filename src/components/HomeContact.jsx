@@ -5,7 +5,12 @@ import PropTypes from 'prop-types';
 const HomeContact = (props) => {
   return (
     <>
-      <ContactForm contactRef={props.contactRef} />
+      <section className="section" id="contact" ref={props.contactRef}>
+        <div className="section__container">
+          <h2 className="section__container--title">Contact me</h2>
+          <ContactForm contactRef={props.contactRef} />
+        </div>
+      </section>
     </>
   );
 };
