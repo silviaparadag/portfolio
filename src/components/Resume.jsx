@@ -1,55 +1,53 @@
 import '../styles/layout/Resume.scss';
+import PropTypes from 'prop-types';
 // import route from '../images/route-white.png';
-import timelineData from '../services/timeline.json';
 
-const Resume = () => {
+const Resume = (props) => {
+  const jobs = props.jobsList.map((eachJob) => {
+    return (
+      <li key={eachJob.id} className="milestonesJobs__item">
+        <div className="milestonesJobs__item--group">
+          <div className="milestonesJobs__item--text">{eachJob.company}</div>
+          <div className="milestonesJobs__group--lineV1"></div>
+        </div>
+      </li>
+    );
+  });
+  const degrees = props.degreeList.map((eachTitle) => {
+    return (
+      <li key={eachTitle.id} className="milestonesEducation__item">
+        <div className="milestonesEducation__item--group">
+          <div className="milestonesEducation__item--text">
+            {eachTitle.name}
+          </div>
+          <div className="milestonesEducation__group--lineV1"></div>
+        </div>
+      </li>
+    );
+  });
+
   return (
     <main className="mainResume">
       <section className="sectionResume">
         <div className="sectionResume__container">
           {/* <img src={route} alt="" className="section__container--img" /> */}
-
           <h2 className="sectionResume__container--title">
             My profesional journey
           </h2>
           <p className="sectionResume__container--text">Timeline</p>
         </div>
-        <div className="milestones__lineH"></div>
-        <ul className="milestones">
-          <li className="milestones__item">
-            <div className="p">Architect</div>
-            <div className="milestones__group--lineV1"></div>
-          </li>
-          <li className="milestones__item">
-            <div className="p">RTA Group</div>
-            <div className="milestones__group--lineV1"></div>
-          </li>
-          <li className="milestones__item">
-            <div className="p">Azotea Grupo</div>
-            <div className="milestones__group--lineV1"></div>
-          </li>
-          <li className="milestones__item">
-            <div className="p">A vida Group | La nena Home</div>
-            <div className="milestones__group--lineV1"></div>
-          </li>
-        </ul>
-        {/* <div id="timeline"></div>
-        <div className="timeline2">
-          <div className="timeline2__lineH"></div>
-          <div className="timeline2__group">
-            <div className="timeline2__group--lineV1"></div>
-            <p className="timeline2__group--text">
-              2007 - 2008. Scholarships: Collaboration with the Chair of History
-              of Architecture in research tasks | Management and assessment of
-              model-making workshop.
-            </p>
-          </div>
-          <div className="timeline2__group--lineV1"></div>
-          <div className="timeline2__group--lineV2"></div>
-        </div> */}
+        <div className="timeline__lineH"></div>
+        <ul className="milestonesJobs">{jobs}</ul>
+        <div className="circle-container"></div>
+        <ul className="milestonesEducation">{degrees}</ul>
       </section>
     </main>
   );
 };
 
 export default Resume;
+
+Resume.propTypes = {
+  jobsList: PropTypes.array.isRequired,
+  degreeList: PropTypes.array.isRequired,
+};
