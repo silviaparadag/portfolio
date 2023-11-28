@@ -14,7 +14,26 @@ const Resume = () => {
           </h2>
           <p className="sectionResume__container--text">Timeline</p>
         </div>
-        <div id="timeline"></div>
+        <div className="milestones__lineH"></div>
+        <ul className="milestones">
+          <li className="milestones__item">
+            <div className="p">Architect</div>
+            <div className="milestones__group--lineV1"></div>
+          </li>
+          <li className="milestones__item">
+            <div className="p">RTA Group</div>
+            <div className="milestones__group--lineV1"></div>
+          </li>
+          <li className="milestones__item">
+            <div className="p">Azotea Grupo</div>
+            <div className="milestones__group--lineV1"></div>
+          </li>
+          <li className="milestones__item">
+            <div className="p">A vida Group | La nena Home</div>
+            <div className="milestones__group--lineV1"></div>
+          </li>
+        </ul>
+        {/* <div id="timeline"></div>
         <div className="timeline2">
           <div className="timeline2__lineH"></div>
           <div className="timeline2__group">
@@ -27,7 +46,7 @@ const Resume = () => {
           </div>
           <div className="timeline2__group--lineV1"></div>
           <div className="timeline2__group--lineV2"></div>
-        </div>
+        </div> */}
       </section>
     </main>
   );
