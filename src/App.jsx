@@ -21,12 +21,9 @@ function App() {
   const [searchByTech, setSearchByTech] = useState('All');
   const [jobsList, setJobsList] = useState(ls.get('jobs', []));
   const [titlesList, setTitlesList] = useState(ls.get('education', []));
-  const [isShown, setIsShown] = useState(false);
 
   const contactRef = useRef();
-  // const scrollToContact = () => {
-  //   contactRef.current.scrollIntoView({ behavior: 'smooth' });
-  // };
+
   const scrollToContact = () => {
     if (contactRef.current) {
       const offsetTop = contactRef.current.offsetTop;
@@ -103,12 +100,6 @@ function App() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
-  const handleMouseOn = () => {
-    setIsShown(true);
-  };
-  const handleMouseOff = () => {
-    setIsShown(false);
-  };
   return (
     <>
       <div className="App">
@@ -143,15 +134,7 @@ function App() {
           />
           <Route
             path="/resume"
-            element={
-              <Resume
-                jobsList={jobsList}
-                titlesList={titlesList}
-                handleMouseOn={handleMouseOn}
-                handleMouseOff={handleMouseOff}
-                isShown={isShown}
-              />
-            }
+            element={<Resume jobsList={jobsList} titlesList={titlesList} />}
           />
           <Route path="/contact" element={<Contact />} />
         </Routes>

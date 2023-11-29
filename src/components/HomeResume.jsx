@@ -7,7 +7,11 @@ const HomeResume = () => {
       {' '}
       <section className="section" id="cv">
         <div className="section__container">
-          <img src={route} alt="" className="section__container--img" />
+          <img
+            src={route}
+            alt="Route map sketch"
+            className="section__container--img"
+          />
 
           <h2 className="section__container--title">My professional journey</h2>
           <p className="section__container--text">
