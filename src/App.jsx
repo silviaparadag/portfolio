@@ -19,6 +19,8 @@ function App() {
   const [projectsList, setProjectsList] = useState(ls.get('projects', []));
   const [searchByText, setSearchByText] = useState('');
   const [searchByTech, setSearchByTech] = useState('All');
+  const [jobsList, setJobsList] = useState(ls.get('jobs', []));
+  const [titlesList, setTitlesList] = useState(ls.get('education', []));
 
   const contactRef = useRef();
   // const scrollToContact = () => {
@@ -44,6 +46,28 @@ function App() {
     }
   }, []);
   console.log(projectsList);
+
+  useEffect(() => {
+    if (ls.get('jobs', null) === null) {
+      dataApi.getJobsFromApi().then((data) => {
+        const result = data.map((eachJob) => eachJob);
+        setJobsList(result);
+        ls.set('jobs', result);
+      });
+    }
+  }, []);
+  console.log(jobsList);
+
+  useEffect(() => {
+    if (ls.get('education', null) === null) {
+      dataApi.getEducationFromApi().then((data) => {
+        const result = data.map((eachTitle) => eachTitle);
+        setTitlesList(result);
+        ls.set('education', result);
+      });
+    }
+  }, []);
+  console.log(titlesList);
 
   const allProjectsList = projectsList.map((eachProject) => eachProject);
   console.log(allProjectsList);
@@ -110,7 +134,10 @@ function App() {
               </>
             }
           />
-          <Route path="/resume" element={<Resume />} />
+          <Route
+            path="/resume"
+            element={<Resume jobsList={jobsList} titlesList={titlesList} />}
+          />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
