@@ -23,9 +23,7 @@ function App() {
   const [titlesList, setTitlesList] = useState(ls.get('education', []));
 
   const contactRef = useRef();
-  // const scrollToContact = () => {
-  //   contactRef.current.scrollIntoView({ behavior: 'smooth' });
-  // };
+
   const scrollToContact = () => {
     if (contactRef.current) {
       const offsetTop = contactRef.current.offsetTop;
