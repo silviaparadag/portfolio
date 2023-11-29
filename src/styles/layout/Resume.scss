@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: 80vh;
+    //height: 80vh;
 }
 
 .sectionResume {
@@ -17,6 +17,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
+    padding-bottom: 40px;
 
     &__container {
         //padding: 0 40px;
@@ -43,35 +44,63 @@
 }
 
 .timeline {
+    &__container {
+        display: flex;
+        height: 650px;
+    }
+
     &__lineH {
-        width: 904px;
-        left: 50px;
-        top: 400px;
-        position: absolute;
-        border: 1px rgb(0, 255, 51) solid;
+        // width: 904px;
+        // height: 5px;
+        width: 5px;
+        background-color: $color-primary;
+        // left: 300px;
+        // top: 300px;
+        // position: absolute;
+        border: 1px $color-primary solid;
     }
 
 }
 
+.timeline__container {
+    max-width: 904px;
+
+    display: flex;
+    height: 650px;
+    justify-content: center;
+}
+
 .milestonesJobs {
+    top: 300px;
+    position: absolute;
+    left: 50%;
+
     display: flex;
     gap: 2rem;
-    color: #878bde;
+    color: $color-primary;
+    height: 650px;
+    flex-direction: column;
+    //    justify-content: center; 
 
     &__item {
         display: flex;
+        //justify-content: flex-start;
+
 
         &--group {
             display: flex;
-            justify-content: center;
+            //justify-content: center;
+            //align-items: center;
             // gap: 1rem;
-            padding-bottom: 5px;
+
         }
 
         &--text {
-            margin-top: -15px;
-            text-align: center;
-            max-width: 12ch;
+            //margin-top: -15px;
+            align-items: center;
+            text-align: left;
+            max-width: 17ch;
+            padding-left: 15px;
 
         }
 
@@ -79,10 +108,11 @@
 
     &__group {
         &--lineV1 {
-            height: 150px;
-            top: 250px;
-            position: absolute;
-            border: 1px red solid;
+            width: 150px;
+            height: 1px;
+            // top: 250px;
+            // position: absolute;
+            border: 1px $color-primary solid;
         }
     }
 
@@ -91,21 +121,30 @@
 .milestonesEducation {
     display: flex;
     gap: 7rem;
-    color: yellow;
+    color: $color-primary;
+    top: 300px;
+    right: 50%;
+    position: absolute;
+    flex-direction: column;
+    //justify-content: center;
+    // max-height: 700px;
 
     &__item {
         display: flex;
+        justify-content: flex-end;
 
         &--group {
             display: flex;
             justify-content: center;
-            padding-bottom: 5px;
+            align-items: center;
+
         }
 
         &--text {
-            top: 500px;
-            position: absolute;
-            margin-top: 15px;
+            // top: 500px;
+            // position: absolute;
+            // margin-top: 15px;
+            padding-right: 15px;
             text-align: center;
             max-width: 12ch;
         }
@@ -114,10 +153,12 @@
 
     &__group {
         &--lineV1 {
-            height: 100px;
-            top: 400px;
-            position: absolute;
-            border: 1px orange dotted;
+            width: 150px;
+            height: 1px;
+            // height: 100px;
+            // top: 400px;
+            // position: absolute;
+            border: 1px $color-primary dotted;
         }
     }
 }
@@ -126,6 +167,7 @@
     color: blue;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 1024px;
     height: 475px;
@@ -133,7 +175,7 @@
 
     &__lineH {
         width: 904px;
-        left: 50px;
+        // left: 50px;
         top: 400px;
         position: absolute;
         border: 1px rgb(0, 255, 51) solid;
@@ -186,18 +228,20 @@
     }
 }
 
+
+
+/* 
+
 .circle-container {
     top: 400px;
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: #f0f0f0;
+    background-color: $color-primary;
     position: relative;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/* 
 */

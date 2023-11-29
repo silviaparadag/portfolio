@@ -20,7 +20,7 @@ function App() {
   const [searchByText, setSearchByText] = useState('');
   const [searchByTech, setSearchByTech] = useState('All');
   const [jobsList, setJobsList] = useState(ls.get('jobs', []));
-  const [degreeList, setDegreeList] = useState(ls.get('education', []));
+  const [titlesList, setTitlesList] = useState(ls.get('education', []));
 
   const contactRef = useRef();
   // const scrollToContact = () => {
@@ -62,12 +62,12 @@ function App() {
     if (ls.get('education', null) === null) {
       dataApi.getEducationFromApi().then((data) => {
         const result = data.map((eachTitle) => eachTitle);
-        setDegreeList(result);
+        setTitlesList(result);
         ls.set('education', result);
       });
     }
   }, []);
-  console.log(degreeList);
+  console.log(titlesList);
 
   const allProjectsList = projectsList.map((eachProject) => eachProject);
   console.log(allProjectsList);
@@ -136,7 +136,7 @@ function App() {
           />
           <Route
             path="/resume"
-            element={<Resume jobsList={jobsList} degreeList={degreeList} />}
+            element={<Resume jobsList={jobsList} titlesList={titlesList} />}
           />
           <Route path="/contact" element={<Contact />} />
         </Routes>

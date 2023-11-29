@@ -7,13 +7,13 @@ const Resume = (props) => {
     return (
       <li key={eachJob.id} className="milestonesJobs__item">
         <div className="milestonesJobs__item--group">
-          <div className="milestonesJobs__item--text">{eachJob.company}</div>
           <div className="milestonesJobs__group--lineV1"></div>
+          <div className="milestonesJobs__item--text">{eachJob.company}</div>
         </div>
       </li>
     );
   });
-  const degrees = props.degreeList.map((eachTitle) => {
+  const titles = props.titlesList.map((eachTitle) => {
     return (
       <li key={eachTitle.id} className="milestonesEducation__item">
         <div className="milestonesEducation__item--group">
@@ -36,10 +36,12 @@ const Resume = (props) => {
           </h2>
           <p className="sectionResume__container--text">Timeline</p>
         </div>
-        <div className="timeline__lineH"></div>
-        <ul className="milestonesJobs">{jobs}</ul>
-        <div className="circle-container"></div>
-        <ul className="milestonesEducation">{degrees}</ul>
+        <div className="timeline__container">
+          <div className="timeline__lineH"></div>
+          <ul className="milestonesJobs">{jobs}</ul>
+          <ul className="milestonesEducation">{titles}</ul>
+          <div className="circle-container"></div>
+        </div>
       </section>
     </main>
   );
@@ -49,5 +51,5 @@ export default Resume;
 
 Resume.propTypes = {
   jobsList: PropTypes.array.isRequired,
-  degreeList: PropTypes.array.isRequired,
+  titlesList: PropTypes.array.isRequired,
 };
