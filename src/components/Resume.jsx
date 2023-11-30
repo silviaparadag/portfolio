@@ -1,11 +1,9 @@
 import '../styles/layout/Resume.scss';
-import img from '../images/ag-cm.jpeg';
-import img2 from '../images/ap-cc.jpg';
-import img3 from '../images/rta-hl.jpg';
 import cap from '../images/sp-cap-bis.svg';
 import fromWhere from '../images/from-where.svg';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import SliderOldProjects from './SliderOldProjects';
 
 const Resume = (props) => {
   const [isShown, setIsShown] = useState(false);
@@ -100,23 +98,8 @@ const Resume = (props) => {
           </p>{' '}
         </div>
 
-        <div className="sectionResume3__container2">
-          <img
-            src={img2}
-            alt="Image El Cuartel del Mar"
-            className="sectionResume3__container2--img2"
-          />
-          <img
-            src={img}
-            alt="Image El Cuartel del Mar"
-            className="sectionResume3__container2--img"
-          />
-          <img
-            src={img3}
-            alt="Image El Cuartel del Mar"
-            className="sectionResume3__container2--img2"
-          />
-        </div>
+        <div className="sectionResume3__container2"></div>
+        <SliderOldProjects jobsList={props.jobsList} />
       </section>
       <section className="sectionResume2">
         <div className="sectionResume2__container">
@@ -174,7 +157,4 @@ export default Resume;
 Resume.propTypes = {
   jobsList: PropTypes.array.isRequired,
   titlesList: PropTypes.array.isRequired,
-  // handleMouseOff: PropTypes.func,
-  // handleMouseOn: PropTypes.func,
-  // isShown: PropTypes.bool,
 };
