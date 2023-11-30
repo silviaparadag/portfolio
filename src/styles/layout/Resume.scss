@@ -61,54 +61,51 @@
     }
 
     &__container2 {
-        display: flex;
-        align-items: center;
-    }
-}
-
-.timeline {
-    display: flex;
-    justify-content: center;
-
-    &__container {
+        //background-color: blue;
         max-width: 1024px;
-        max-height: 380px;
+        // width: 100%;
+        //padding-right: 40px;
+        //margin-right: 40px;
         display: flex;
-        justify-content: center;
-        position: relative;
-        //margin: auto;
-        // overflow-x: auto;
-        overflow-y: scroll;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
 
+        &--left {
+            //background-color: green;
+            min-width: 475px;
+            max-height: 380px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            overflow-y: scroll;
+        }
 
         &--lineV {
             top: 0;
             bottom: 0;
             width: 5px;
             height: 650px;
-
             background-color: $color-primary;
             border: 1px $color-primary solid;
-            // transform: translateX(100%);
         }
     }
-
 }
 
-.milestonesJobs,
-.milestonesJobs2 {
 
+.milestonesJobs {
+    min-height: 650px;
     color: $color-primary;
-
-    width: 100%;
-    //position: absolute;
     display: flex;
-
-    gap: 2rem;
     flex-direction: column;
     justify-content: space-between;
+    gap: 2rem;
     padding: 40px 0 0;
-    // margin: 50px 0;
+
+    :hover {
+        color: red;
+        font-weight: 700;
+    }
 
     &__item {
         display: flex;
@@ -122,17 +119,10 @@
         &--lineH1 {
             width: 150px;
             height: 1px;
-            border: 1px $color-primary solid;
-            margin: 0.5rem 0
+            margin: 0.5rem 0;
+            border: 1px solid;
         }
-    }
-}
 
-.milestonesJobs {
-    min-height: 650px;
-    // transform: translateX(-50%);
-
-    &__item {
         &--text {
             align-items: center;
             text-align: left;
@@ -153,34 +143,53 @@
     }
 }
 
-.milestonesJobs2 {
-    // transform: translateX(-100%);
-    // padding-right: 50px;
-    //position: absolute;
+.jobDescription {
+
+    color: $color-primary;
+    height: 380px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-end;
+    //gap: 2rem;
+    min-width: 300px;
 
     &__item {
-        justify-content: flex-end;
         color: $color-secondary4;
 
         &--group2 {
-            padding: 5px;
+            //background-color: red;
             display: flex;
             align-items: center;
-            border: 1px $color-secondary4 dotted;
+            justify-content: start;
+            padding: 5px;
+            width: 300px;
+            min-height: 150px;
+
+        }
+
+        &--title {
+            font-weight: 700;
+            width: 50px;
+            padding: 0 15px;
         }
 
         &--text {
-            padding-right: 15px;
-            max-width: 25ch;
+            font-size: .8rem;
+            border-left: 1px white dotted;
+            line-height: 1.2rem;
+            padding: 0 15px;
+            //width: 50ch;
         }
 
     }
 }
 
 .focused {
-    background-color: #d9d9675a;
-    border-radius: .2rem;
-    outline: solid 1px red;
+    color: white;
+    background-color: #d6d6d625;
+    border-radius: 10px;
 }
 
 .milestonesEducation {
@@ -214,7 +223,6 @@
 
 
 .sectionResume2 {
-
     &__container {
         display: flex;
         flex-direction: column;
@@ -256,7 +264,7 @@
         }
 
         &--text {
-            text-align: center;
+            text-align: right;
             max-width: 45ch;
             font-size: .8rem;
             line-height: 1.4;
@@ -328,8 +336,6 @@
     &__container {
         display: flex;
         justify-content: center;
-        // flex-direction: column;
-        // align-items: flex-end;
 
         &--title {
             font-family: $font-secondary2;
@@ -363,6 +369,3 @@
         }
     }
 }
-
-/* 
-*/
