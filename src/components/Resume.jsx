@@ -2,6 +2,8 @@ import '../styles/layout/Resume.scss';
 import img from '../images/ag-cm.jpeg';
 import img2 from '../images/ap-cc.jpg';
 import img3 from '../images/rta-hl.jpg';
+import cap from '../images/sp-cap-bis.svg';
+import fromWhere from '../images/from-where.svg';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -79,23 +81,14 @@ const Resume = (props) => {
             my experience and skills.
           </p>
         </div>
-        <div className="timeline__container">
-          <div className="timeline__lineV"></div>
+        <div className="sectionResume__container2">
+          <div className="timeline__container">
+            <div className="timeline__container--lineV"></div>
+            <ul className="milestonesJobs">{jobs}</ul>
+          </div>
           <ul className="milestonesJobs2">{jobDescription}</ul>
-          <ul className="milestonesJobs">{jobs}</ul>
         </div>
-      </section>
-      <section className="sectionResume2">
-        <div className="sectionResume2__container">
-          <h2 className="sectionResume2__container--title">Education</h2>
-          <p className="sectionResume2__container--text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
-        <div className="milestonesEducation">
-          <ul className="milestonesEducation">{titles}</ul>
-        </div>
-      </section>
+      </section>{' '}
       <section className="sectionResume3">
         <div className="sectionResume3__container">
           <h2 className="sectionResume3__container--title">Some of </h2>{' '}
@@ -119,11 +112,43 @@ const Resume = (props) => {
           />
         </div>
       </section>
+      <section className="sectionResume2">
+        <div className="sectionResume2__container">
+          <h2 className="sectionResume2__container--title">
+            Education & skills
+          </h2>
+          <p className="sectionResume2__container--text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div className="milestonesEducation">
+          <ul className="milestonesEducation">{titles}</ul>
+        </div>
+      </section>{' '}
+      <section className="sectionResume5">
+        <div className="sectionResume5__container">
+          <h2 className="sectionResume5__container--title">From </h2>{' '}
+          <h2 className="sectionResume5__container--title2">where</h2>{' '}
+        </div>
+        <div className="sectionResume5__container2">
+          <img
+            src={fromWhere}
+            alt="Location timeline"
+            className="sectionResume5__container2--img"
+          />
+        </div>
+      </section>
       <section className="sectionResume4">
         <div className="sectionResume4__container">
-          <h2 className="sectionResume4__container--title">
-            Take a look at my CV
-          </h2>{' '}
+          <img
+            src={cap}
+            alt="Silvia Parada Cap sketch"
+            className="sectionResume4__container--img"
+          />
+          <h2 className="sectionResume4__container--title">It's almost here</h2>{' '}
+          <p className="sectionResume4__container--text">
+            You can't take a look at my resume in the following links.
+          </p>
         </div>
         <div className="mainResume__link">
           <a href="#" className="mainResume__link--button">
