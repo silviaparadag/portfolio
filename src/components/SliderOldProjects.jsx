@@ -4,42 +4,34 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const SliderOldProjects = (props) => {
-  //   const pictures = [
-  //     'https://silviaparadag.github.io/api-sp/projects-portfolio/images-timeline/ap-cc.jpg',
-  //     'https://silviaparadag.github.io/api-sp/projects-portfolio/images-timeline/rta-hl.jpg',
-  //     'https://silviaparadag.github.io/api-sp/projects-portfolio/images-timeline/ap-cc.jpg',
-  //     'https://silviaparadag.github.io/api-sp/projects-portfolio/images-timeline/rta-hl.jpg',
-  //     'https://silviaparadag.github.io/api-sp/projects-portfolio/images-timeline/ap-cc.jpg',
-  //     'https://silviaparadag.github.io/api-sp/projects-portfolio/images-timeline/rta-hl.jpg',
-  //     'https://silviaparadag.github.io/api-sp/projects-portfolio/images-timeline/ap-cc.jpg',
-  //     'https://silviaparadag.github.io/api-sp/projects-portfolio/images-timeline/ap-cc.jpg',
-  //   ];
   const pictures = props.jobsList.flatMap((eachJob) =>
-    eachJob.pictures.map((eachImg) => eachImg.img)
+    eachJob.pictures.map((eachImg, index) => (
+      <div key={index} className="sectionResume3__container2">
+        <img
+          src={eachImg.img}
+          alt={`Picture of ${eachImg.name}`}
+          className="sectionResume3__container2--img"
+        />
+      </div>
+    ))
   );
-
-  console.log(pictures);
   const settings = {
+    // arrows: false,
     dots: true,
+    centerMode: true,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    // fade: true,
+    // adaptiveHeight: true,
+    centerPadding: '40px',
+    pauseOnHover: true,
     infinite: true,
-    speed: 500,
+    speed: 100,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
 
-  return (
-    <Slider {...settings}>
-      {pictures.map((eachPic, index) => (
-        <div key={index} className="sectionResume3__container2">
-          <img
-            src={eachPic}
-            alt={`Picture number ${index + 1}`}
-            className="sectionResume3__container2--img"
-          />
-        </div>
-      ))}
-    </Slider>
-  );
+  return <Slider {...settings}>{pictures}</Slider>;
 };
 
 export default SliderOldProjects;

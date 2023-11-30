@@ -98,7 +98,7 @@ const Resume = (props) => {
           </p>{' '}
         </div>
 
-        <div className="sectionResume3__container2"></div>
+        {/* <div className="sectionResume3__container2"></div> */}
         <SliderOldProjects jobsList={props.jobsList} />
       </section>
       <section className="sectionResume2">
