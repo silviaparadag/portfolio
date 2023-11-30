@@ -67,6 +67,9 @@ function App() {
   }, []);
   console.log(titlesList);
 
+  const orderedJobs = jobsList.sort((a, b) => b.year - a.year);
+  console.log(orderedJobs);
+
   const allProjectsList = projectsList.map((eachProject) => eachProject);
   console.log(allProjectsList);
 
@@ -134,7 +137,7 @@ function App() {
           />
           <Route
             path="/resume"
-            element={<Resume jobsList={jobsList} titlesList={titlesList} />}
+            element={<Resume jobsList={orderedJobs} titlesList={titlesList} />}
           />
           <Route path="/contact" element={<Contact />} />
         </Routes>

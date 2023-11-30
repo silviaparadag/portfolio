@@ -59,40 +59,56 @@
             padding: 20px 0;
         }
     }
+
+    &__container2 {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .timeline {
+    display: flex;
+    justify-content: center;
+
     &__container {
-        max-width: 904px;
-        height: 650px;
+        max-width: 1024px;
+        max-height: 380px;
         display: flex;
         justify-content: center;
-        //align-items: center;
         position: relative;
-        margin: auto;
-    }
+        //margin: auto;
+        // overflow-x: auto;
+        overflow-y: scroll;
 
-    &__lineV {
-        top: 0;
-        bottom: 0;
-        width: 5px;
-        background-color: $color-primary;
-        border: 1px $color-primary solid;
+
+        &--lineV {
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            height: 650px;
+
+            background-color: $color-primary;
+            border: 1px $color-primary solid;
+            // transform: translateX(100%);
+        }
     }
 
 }
 
 .milestonesJobs,
 .milestonesJobs2 {
+
     color: $color-primary;
-    height: 650px;
+
     width: 100%;
-    position: absolute;
+    //position: absolute;
     display: flex;
+
     gap: 2rem;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px 0;
+    padding: 40px 0 0;
+    // margin: 50px 0;
 
     &__item {
         display: flex;
@@ -113,7 +129,8 @@
 }
 
 .milestonesJobs {
-    transform: translateX(50%);
+    min-height: 650px;
+    // transform: translateX(-50%);
 
     &__item {
         &--text {
@@ -137,8 +154,9 @@
 }
 
 .milestonesJobs2 {
-    transform: translateX(-100%);
-    padding-right: 50px;
+    // transform: translateX(-100%);
+    // padding-right: 50px;
+    //position: absolute;
 
     &__item {
         justify-content: flex-end;
@@ -246,6 +264,7 @@
         }
 
         &--title2 {
+            color: $color-secondary4;
             font-size: 1.75rem;
             font-style: italic;
             line-height: .5;
@@ -295,6 +314,52 @@
         &--titleSpan {
             font-style: italic;
             font-family: $font-secondary;
+        }
+
+        &--img {
+            width: 150px;
+        }
+    }
+}
+
+.sectionResume5 {
+    padding: 60px 0;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        // flex-direction: column;
+        // align-items: flex-end;
+
+        &--title {
+            font-family: $font-secondary2;
+            font-size: 1.75rem;
+
+        }
+
+        &--title2 {
+            color: $color-secondary4;
+            font-size: 1.75rem;
+            font-style: italic;
+            font-weight: 700;
+            font-family: $font-secondary;
+
+        }
+    }
+
+    &__container2 {
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        &--img {
+            width: 60%;
+        }
+
+        &--img2 {
+            width: 300px;
+            filter: saturate(0%);
         }
     }
 }
