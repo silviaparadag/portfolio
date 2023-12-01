@@ -1,11 +1,9 @@
 import '../styles/layout/Resume.scss';
-import img from '../images/ag-cm.jpeg';
-import img2 from '../images/ap-cc.jpg';
-import img3 from '../images/rta-hl.jpg';
 import cap from '../images/sp-cap-bis.svg';
 import fromWhere from '../images/from-where.svg';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import SliderOldProjects from './SliderOldProjects';
 
 const Resume = (props) => {
   const [isShown, setIsShown] = useState(false);
@@ -19,21 +17,22 @@ const Resume = (props) => {
     setJobId('');
     setIsShown(false);
   };
-  const jobDescriptionClassName = `milestonesJobs2__item ${
+  const jobDescriptionClassName = `jobDescription__item ${
     isShown ? 'focused' : ''
   }`;
 
   const jobDescription = props.jobsList.map((eachJob) =>
     isShown && eachJob.id === jobId ? (
       <li key={eachJob.id} className={jobDescriptionClassName}>
-        <div className="milestonesJobs2__item--group2">
-          <h5 className="milestonesJobs2__item--text">{eachJob.year}</h5>
-          <p className="milestonesJobs2__item--text">{eachJob.desc}</p>
+        <div className="jobDescription__item--group2">
+          <h5 className="jobDescription__item--title">{eachJob.year}</h5>
+          <p className="jobDescription__item--text">{eachJob.desc}</p>
         </div>
       </li>
-    ) : null
+    ) : (
+      <li key={eachJob.id} className="jobDescription__item"></li>
+    )
   );
-
   const jobs = props.jobsList.map((eachJob) => {
     return (
       <li
@@ -76,41 +75,31 @@ const Resume = (props) => {
             journey
           </h2>
           <p className="sectionResume__container--text">
-            My professional journey in management and architecture, and my
-            exciting transition into frontend development. Discover more about
-            my experience and skills.
+            Let's discover more about my professional career in management and
+            architecture, before my exciting transition to web development. Find
+            out more about my experience and skills.
           </p>
         </div>
         <div className="sectionResume__container2">
-          <div className="timeline__container">
-            <div className="timeline__container--lineV"></div>
+          <div className="sectionResume__container2--left">
+            <div className="sectionResume__container2--lineV"></div>
             <ul className="milestonesJobs">{jobs}</ul>
           </div>
-          <ul className="milestonesJobs2">{jobDescription}</ul>
+          <ul className="jobDescription">{jobDescription}</ul>
         </div>
       </section>{' '}
       <section className="sectionResume3">
         <div className="sectionResume3__container">
           <h2 className="sectionResume3__container--title">Some of </h2>{' '}
           <h2 className="sectionResume3__container--title2">me</h2>{' '}
+          <p className="sectionResume3__container--text">
+            Each of the following projects contains something of me, designing,
+            managing or building.{' '}
+          </p>{' '}
         </div>
-        <div className="sectionResume3__container2">
-          <img
-            src={img2}
-            alt="Image El Cuartel del Mar"
-            className="sectionResume3__container2--img2"
-          />
-          <img
-            src={img}
-            alt="Image El Cuartel del Mar"
-            className="sectionResume3__container2--img"
-          />
-          <img
-            src={img3}
-            alt="Image El Cuartel del Mar"
-            className="sectionResume3__container2--img2"
-          />
-        </div>
+
+        {/* <div className="sectionResume3__container2"></div> */}
+        <SliderOldProjects jobsList={props.jobsList} />
       </section>
       <section className="sectionResume2">
         <div className="sectionResume2__container">
@@ -168,7 +157,4 @@ export default Resume;
 Resume.propTypes = {
   jobsList: PropTypes.array.isRequired,
   titlesList: PropTypes.array.isRequired,
-  // handleMouseOff: PropTypes.func,
-  // handleMouseOn: PropTypes.func,
-  // isShown: PropTypes.bool,
 };
