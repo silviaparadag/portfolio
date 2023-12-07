@@ -65,7 +65,7 @@
         max-width: 1024px;
         // width: 100%;
         //padding-right: 40px;
-        //margin-right: 40px;
+        margin-right: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -369,4 +369,12 @@
             filter: saturate(0%);
         }
     }
+}
+
+// IMPORTATN: Adjust ARROWS' size for different devices
+
+.image-gallery-icon.image-gallery-left-nav svg,
+.image-gallery-icon.image-gallery-right-nav svg {
+    width: 30px;
+    height: 60px;
 }
