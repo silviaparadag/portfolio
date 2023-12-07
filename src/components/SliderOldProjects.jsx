@@ -7,7 +7,6 @@ const SliderOldProjects = (props) => {
   const pictures = props.jobsList.flatMap((eachJob) =>
     eachJob.pictures.map((eachImg) => ({
       original: eachImg.img,
-      // description: eachImg.name,
       renderItem: (item) => (
         <div className="image-gallery-image">
           <img
@@ -27,7 +26,6 @@ const SliderOldProjects = (props) => {
           className={`image-gallery-left-nav ${disabled ? 'disabled' : ''}`}
           onClick={onClick}
         >
-          {/* Personaliza la apariencia de la flecha izquierda aquí */}
           &lt;
         </button>
       ),
@@ -36,7 +34,6 @@ const SliderOldProjects = (props) => {
           className={`image-gallery-right-nav ${disabled ? 'disabled' : ''}`}
           onClick={onClick}
         >
-          {/* Personaliza la apariencia de la flecha derecha aquí */}
           &gt;
         </button>
       ),
@@ -56,5 +53,5 @@ const SliderOldProjects = (props) => {
 export default SliderOldProjects;
 
 SliderOldProjects.propTypes = {
-  jobsList: PropTypes.array.isRequired,
+  jobsList: PropTypes.array,
 };
