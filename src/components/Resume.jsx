@@ -25,8 +25,8 @@ const Resume = (props) => {
     isShown && eachJob.id === jobId ? (
       <li key={eachJob.id} className={jobDescriptionClassName}>
         <div className="jobDescription__item--group2">
-          <h5 className="jobDescription__item--title">{eachJob.year}</h5>
-          <p className="jobDescription__item--text">{eachJob.desc}</p>
+          <h5 className="jobDescription__item--title">{eachJob.period}</h5>
+          <p className="jobDescription__item--text wrap">{eachJob.desc}</p>
         </div>
       </li>
     ) : (
@@ -140,10 +140,16 @@ const Resume = (props) => {
           </p>
         </div>
         <div className="mainResume__link">
-          <a href="#" className="mainResume__link--button">
+          <a
+            href="https://drive.google.com/file/d/16D7hZ3wRuppVjCb4o2UmWdy3_I3q1vE1/view?usp=drive_link"
+            className="mainResume__link--button"
+          >
             English
           </a>
-          <a href="#" className="mainResume__link--button">
+          <a
+            href="https://drive.google.com/file/d/1eC5ZFPSaaaBkUshJVaxbnRoRVQAP8vmz/view?usp=drive_link"
+            className="mainResume__link--button"
+          >
             Español
           </a>
         </div>
