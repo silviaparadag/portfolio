@@ -143,12 +143,16 @@ const Resume = (props) => {
           <a
             href="https://drive.google.com/file/d/16D7hZ3wRuppVjCb4o2UmWdy3_I3q1vE1/view?usp=drive_link"
             className="mainResume__link--button"
+            target="_blank"
+            rel="noreferrer"
           >
             English
           </a>
           <a
             href="https://drive.google.com/file/d/1eC5ZFPSaaaBkUshJVaxbnRoRVQAP8vmz/view?usp=drive_link"
             className="mainResume__link--button"
+            target="_blank"
+            rel="noreferrer"
           >
             Español
           </a>
