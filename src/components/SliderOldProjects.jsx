@@ -1,4 +1,5 @@
 import ImageGallery from 'react-image-gallery';
+import '../styles/layout/Resume.scss';
 import PropTypes from 'prop-types';
 import 'react-image-gallery/styles/scss/image-gallery.scss';
 

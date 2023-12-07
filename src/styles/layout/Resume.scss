@@ -371,75 +371,10 @@
     }
 }
 
-.image-gallery-left-nav,
-.image-gallery-right-nav {
-    width: 14px; // Ajusta el ancho del botón según tus preferencias
-    height: 14px;
-    font-size: 4px; // Ajusta el tamaño de la fuente
-    color: #333; // Ajusta el color
-    background-color: #882b2b; // Ajusta el color de fondo
-    border: 1px solid #333; // Ajusta el borde
-    border-radius: 50%; // Ajusta la forma del borde
-    //padding: 10px; // Ajusta el relleno
-    //margin-top: -30px; // Ajusta la posición vertical
+// IMPORTATN: Adjust ARROWS' size for different devices
+
+.image-gallery-icon.image-gallery-left-nav svg,
+.image-gallery-icon.image-gallery-right-nav svg {
+    width: 30px;
+    height: 60px;
 }
-
-.image-gallery-left-nav svg,
-.image-gallery-right-nav svg {
-    width: 100%; // Ajusta el tamaño del icono al tamaño del botón
-    height: 100%;
-}
-
-.image-gallery-left-nav:hover,
-.image-gallery-right-nav:hover {
-    font-size: 10px;
-    color: #fff; // Cambia el color al pasar el mouse
-    background-color: #333; // Cambia el color de fondo al pasar el mouse
-}
-
-// .image-gallery-icon {
-//     color: violet;
-//     transition: all .3s ease-out;
-//     appearance: none;
-//     background-color: goldenrod;
-//     border: 0;
-//     cursor: pointer;
-//     outline: none;
-//     position: absolute;
-//     z-index: 4;
-//     filter: drop-shadow(red);
-
-//     @media (hover: hover) and (pointer: fine) {
-//         &:hover {
-//             color: blue;
-
-//             .image-gallery-svg {
-//                 transform: scale(1.1);
-//             }
-//         }
-//     }
-
-//     &:focus {
-//         // a11y support
-//         outline: 2px solid green;
-//     }
-// }
-
-// .image-gallery-svg {
-//     height: 60px;
-//     width: 60px;
-// }
-
-// @media (max-width: 768) {
-//     .image-gallery-svg {
-//         height: 72px;
-//         width: 36px;
-//     }
-// }
-
-// @media (max-width: 480) {
-//     .image-gallery-svg {
-//         height: 48px;
-//         width: 24px;
-//     }
-// }
