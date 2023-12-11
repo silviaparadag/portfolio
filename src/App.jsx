@@ -59,7 +59,7 @@ function App() {
   useEffect(() => {
     if (ls.get('education', null) === null) {
       dataApi.getEducationFromApi().then((data) => {
-        const result = data.map((eachTitle) => eachTitle);
+        const result = data.education.map((eachTitle) => eachTitle);
         setTitlesList(result);
         ls.set('education', result);
       });

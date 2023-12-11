@@ -54,11 +54,14 @@ const Resume = (props) => {
   const titles = props.titlesList.map((eachTitle) => {
     return (
       <li key={eachTitle.id} className="milestonesEducation__item">
-        <div className="milestonesEducation__item--group">
-          <div className="milestonesEducation__item--text">
-            {eachTitle.name}
-          </div>
-          <div className="milestonesEducation__item--lineH1"></div>
+        <div className="milestonesEducation__item--title">{eachTitle.name}</div>
+        <div className="milestonesEducation__item--dot"></div>
+        <div className="milestonesEducation__item--lineV"></div>
+        <div className="milestonesEducation__item--desc">
+          <p className="milestonesEducation__item--text2">{eachTitle.year}</p>
+          <p className="milestonesEducation__item--text2">
+            {eachTitle.institution}
+          </p>
         </div>
       </li>
     );
@@ -107,11 +110,12 @@ const Resume = (props) => {
             Education & skills
           </h2>
           <p className="sectionResume2__container--text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            A brief overview of my educational background and skillset.
           </p>
         </div>
         <div className="milestonesEducation">
-          <ul className="milestonesEducation">{titles}</ul>
+          <div className="milestonesEducation__lineH"></div>
+          <ul className="milestonesEducation__items">{titles}</ul>
         </div>
       </section>{' '}
       <section className="sectionResume5">
@@ -139,22 +143,22 @@ const Resume = (props) => {
             You can't take a look at my resume in the following links.
           </p>
         </div>
-        <div className="mainResume__link">
+        <div className="sectionResume4__link">
           <a
             href="https://drive.google.com/file/d/16D7hZ3wRuppVjCb4o2UmWdy3_I3q1vE1/view?usp=drive_link"
-            className="mainResume__link--button"
+            className="sectionResume4__link--button1"
             target="_blank"
             rel="noreferrer"
           >
-            English
+            EN
           </a>
           <a
             href="https://drive.google.com/file/d/1eC5ZFPSaaaBkUshJVaxbnRoRVQAP8vmz/view?usp=drive_link"
-            className="mainResume__link--button"
+            className="sectionResume4__link--button2"
             target="_blank"
             rel="noreferrer"
           >
-            Español
+            ES
           </a>
         </div>
       </section>
