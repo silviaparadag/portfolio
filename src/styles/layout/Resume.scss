@@ -9,7 +9,7 @@
     padding: 0 40px;
 
     &__link {
-        color: white;
+        color: $color-primary;
         text-decoration: none;
         display: flex;
         justify-content: center;
@@ -19,7 +19,7 @@
             padding: 10px 10px;
             border-radius: 10px;
             border: none;
-            background-color: red;
+            background-color: $color-primary4;
             color: $color-primary;
             text-decoration: none;
         }
@@ -103,7 +103,7 @@
     padding: 40px 0 0;
 
     :hover {
-        color: red;
+        color: $color-primary4;
         font-weight: 700;
     }
 
@@ -144,7 +144,6 @@
 }
 
 .jobDescription {
-
     color: $color-primary;
     height: 380px;
     margin-right: 40px;
@@ -152,14 +151,12 @@
     flex-direction: column;
     align-content: flex-start;
     align-items: flex-end;
-    //gap: 2rem;
     min-width: 300px;
 
     &__item {
         color: $color-secondary4;
 
         &--group2 {
-            //background-color: red;
             display: flex;
             align-items: center;
             justify-content: start;
@@ -177,7 +174,7 @@
 
         &--text {
             font-size: .8rem;
-            border-left: 1px white dotted;
+            border-left: 1px $color-primary dotted;
             line-height: 1.2rem;
             padding: 0 15px;
             //width: 50ch;
@@ -187,46 +184,99 @@
 }
 
 .focused {
-    color: white;
+    color: $color-primary;
     background-color: #d6d6d625;
     border-radius: 10px;
 }
 
 .milestonesEducation {
     color: $color-primary;
-    width: 100%;
+    width: 600px;
     display: flex;
     gap: 2rem;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding: 40px 0;
+    position: relative;
+    margin: 20px 0;
+
+    &__items {
+        display: flex;
+    }
+
+    &__lineH {
+        position: absolute;
+        //top: 30px;
+        width: 100%;
+        height: 1px;
+        background-color: $color-primary;
+        z-index: 1;
+    }
 
     &__item {
         display: flex;
         justify-content: flex-end;
+        flex-direction: row;
+        align-items: center;
+        margin-top: -20px;
+        position: relative;
+        z-index: 2;
 
-        &--text {
-            padding-right: 15px;
-            text-align: center;
+        &--title {
             max-width: 17ch;
+            transform: translateY(-75px);
         }
 
-        &--lineH1 {
-            width: 1px;
-            height: 10px;
-            border: 1px $color-primary solid;
-            margin: 0.5rem 0
+        &--desc {
+            max-width: 17ch;
+            text-align: start;
+            transform: translateY(75px);
         }
+
+
+        &--dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+
+        &--lineV {
+            // width: 1px;
+            // height: 120px;
+            // border: 1px white solid;
+            position: absolute;
+            top: -50px;
+            bottom: -50px;
+            left: 50%;
+            width: 1px;
+            background-color: $color-primary;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
     }
 }
 
 
 .sectionResume2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+
     &__container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
 
         &--title {
             padding: 20px 0 10px;
@@ -240,6 +290,7 @@
             font-size: .8rem;
             line-height: 1.4;
             padding: 20px 0;
+            margin-bottom: 40px;
         }
 
         &--titleSpan {
@@ -309,6 +360,7 @@
 
 .sectionResume4 {
     padding: 60px 0;
+    color: $color-primary;
 
     &__container {
         display: flex;
@@ -338,7 +390,37 @@
             width: 150px;
         }
     }
+
+    &__link {
+        color: $color-primary;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+
+        &--button1,
+        &--button2 {
+            width: 50px;
+            margin: 10px 0 10px 10px;
+            padding: 10px 10px;
+            border-radius: 10px;
+            border: none;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        &--button1 {
+            background-color: $color-primary4;
+            color: $color-primary;
+        }
+
+        &--button2 {
+            background-color: $color-primary;
+            color: $color-primary4;
+        }
+    }
 }
+
 
 .sectionResume5 {
     padding: 60px 0;
