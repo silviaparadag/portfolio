@@ -7,17 +7,23 @@ const SliderOldProjects = (props) => {
   const pictures = props.jobsList.flatMap((eachJob) =>
     eachJob.pictures.map((eachImg) => ({
       original: eachImg.img,
+      thumbnail: eachImg.img,
+      description: (
+        <p className="sectionResume3__container2--text">{eachImg.name}</p>
+      ),
+      // originalTitle: (
+      //   <p className="sectionResume3__container2--text">{eachImg.name}</p>
+      // ),
       renderItem: (item) => (
         <div className="image-gallery-image">
           <img
+            className="sectionResume3__container2--img"
             src={item.original}
             alt={item.description}
-            style={{ width: '300px' }}
+            // style={{ width: '450px' }}
           />
           {item.description && (
-            <span className="image-gallery-description">
-              {item.description}
-            </span>
+            <p className="image-gallery-description">{item.description}</p>
           )}
         </div>
       ),
@@ -44,7 +50,8 @@ const SliderOldProjects = (props) => {
     showFullscreenButton: false,
     showPlayButton: false,
     showNav: true,
-    showThumbnails: false,
+    showThumbnails: true,
+    // thumbnailPosition: 'left',
   };
 
   return <ImageGallery {...options} items={pictures} />;
