@@ -6,20 +6,12 @@
     padding: 10px 40px;
     display: flex;
     justify-content: space-between;
-    font-family: $font-main2;
     color: $color-gray-ultralight;
     background-color: $color-primary2;
-    font-family: $font-main2;
-    // &__title {
-    //     color: $color-primary3;
-    //     font-family: $font-main2;
-    //     padding: 10px 10px 10px;
-    // }
 
     &__logo {
         max-height: 40px;
         margin: 10px 0;
-
     }
 }
 
@@ -27,21 +19,12 @@
     display: none;
 }
 
-// .container {
-//     max-width: 1200px;
-//     //width: auto;
-//     padding: 0 40px 0;
-//     background-color: $color-primary2;
-//     display: flex;
-//     justify-content: space-between;
-
-// }
-
 .nav {
     margin: 10px 0;
     display: flex;
     align-items: center;
     gap: 20px;
+    font-size: .85rem;
 
     &__link {
         color: white;
@@ -55,6 +38,11 @@
             background-color: red;
             color: $color-primary;
             text-decoration: none;
+            font-size: .85rem;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            text-align: center;
         }
 
     }
