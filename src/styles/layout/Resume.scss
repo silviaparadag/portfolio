@@ -8,22 +8,6 @@
     gap: 1rem;
     padding: 0 40px;
 
-    &__link {
-        color: $color-primary;
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-
-        &--button {
-            margin: 10px 0 10px 10px;
-            padding: 10px 10px;
-            border-radius: 10px;
-            border: none;
-            background-color: $color-primary4;
-            color: $color-primary;
-            text-decoration: none;
-        }
-    }
 }
 
 .sectionResume {
@@ -61,10 +45,7 @@
     }
 
     &__container2 {
-        //background-color: blue;
         max-width: 1024px;
-        // width: 100%;
-        //padding-right: 40px;
         margin-right: 40px;
         display: flex;
         justify-content: space-between;
@@ -72,7 +53,6 @@
         gap: 20px;
 
         &--left {
-            //background-color: green;
             min-width: 475px;
             max-height: 380px;
             display: flex;
@@ -213,6 +193,7 @@
         height: 1px;
         background-color: $color-primary;
         z-index: 1;
+        margin-bottom: 20px;
     }
 
     &__item {
