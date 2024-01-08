@@ -2,15 +2,18 @@ import '../styles/layout/Header.scss';
 //import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import logo from '../images/s-p_logo.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Header = (props) => {
   const [isNavShown, setIsNavShown] = useState(false);
 
   const toggleNav = () => {
     setIsNavShown(!isNavShown);
-    console.log();
   };
+
+  useEffect(() => {
+    setIsNavShown(false);
+  }, []);
 
   const contactButton = props.isHomePage ? (
     <button onClick={props.scrollToContact} className="nav__link--button">
@@ -23,7 +26,7 @@ const Header = (props) => {
   );
 
   const navigationMenu = () => (
-    <nav className={`nav ${isNavShown ? 'nav--shown' : ''}`}>
+    <nav className={`nav ${isNavShown ? '' : 'nav--shown'}`}>
       <a href="#aboutme" className="nav__link">
         About me
       </a>

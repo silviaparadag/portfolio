@@ -1,4 +1,5 @@
 @import '../core/variables.scss';
+@import '../core/mixins.scss';
 
 .main {
     //background-color: $color-secondary2;
@@ -14,9 +15,14 @@
     display: flex;
     align-items: left;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column-reverse;
+    align-items: center;
     gap: 1rem;
 
+    @include Tablet() {
+        flex-direction: row;
+
+    }
 
     &__container {
         max-width: 1200px;
@@ -50,15 +56,22 @@
         padding-right: 40px;
         width: 50%;
 
+        @include Tablet() {}
+
         &--img {
-            width: 50%;
+            width: 100%;
+
+            @include Tablet() {
+                width: 50%;
+            }
         }
     }
 
 }
 
+
 .section {
-    padding: 2rem;
+    padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +80,7 @@
 
     &__container {
         max-width: 1200px;
-        padding: 0 40px;
+        // padding: 0 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -82,18 +95,24 @@
             font-family: $font-secondary;
             font-size: 1.75rem;
             line-height: 1.2;
+
         }
 
         &--link {
             text-decoration: none;
             color: $color-primary;
+            text-align: left;
         }
 
         &--text {
-            text-align: center;
+            text-align: left;
             max-width: 45ch;
             font-size: .8rem;
             line-height: 1.4;
+
+            @include Tablet() {
+                text-align: center;
+            }
         }
 
         &--projects {
@@ -150,7 +169,7 @@
 
 .form {
     width: 100%;
-    min-width: 300px;
+    min-width: 280px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
