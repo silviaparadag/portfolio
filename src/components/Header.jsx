@@ -43,18 +43,6 @@ const Header = (props) => {
         <a href="/portfolio/">
           <img src={logo} alt="Silvia Parada Logo" className="header__logo" />
         </a>
-        {/* <nav className="nav">
-          <a href="#aboutme" className="nav__link">
-            About me
-          </a>
-          <a href="#projects" className="nav__link">
-            Projects
-          </a>
-          <a href="#resume" className="nav__link">
-            CV
-          </a>
-          {contactButton}
-        </nav> */}
         <div className="menu">
           <div className="menu__icon" onClick={toggleNav}>
             ☰

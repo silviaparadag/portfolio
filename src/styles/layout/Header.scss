@@ -3,7 +3,7 @@
 @import '../core/mixins';
 
 .header {
-    padding: 10px 40px;
+    padding: 10px 40px 20px;
     display: flex;
     justify-content: space-between;
     color: $color-gray-ultralight;
@@ -31,6 +31,7 @@
         color: white;
         text-decoration: none;
 
+
         &--button {
             margin: 10px 0 10px 10px;
             padding: 10px 10px;
@@ -44,8 +45,18 @@
             display: flex;
             align-items: center;
             text-align: center;
+            justify-content: center;
+            width: 85px;
         }
 
+        &--button:hover {
+            font-weight: 700;
+        }
+
+    }
+
+    &__link:hover {
+        font-weight: 700;
     }
 
 }
@@ -71,13 +82,29 @@
 
     .nav {
         padding-top: 10px;
-        background-color: rgba(245, 245, 220, 0.454);
+        background-color: red;
         z-index: 10;
         position: absolute;
         top: 62.5px;
         left: 0%;
         right: 0%;
         flex-direction: column;
+
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+
+            &--button {
+                background-color: #000;
+            }
+        }
+
+        &__link:hover {
+            width: 100%;
+            background-color: #ffffff14;
+        }
     }
 
     .nav--shown {
