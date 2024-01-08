@@ -8,6 +8,7 @@
     justify-content: space-between;
     color: $color-gray-ultralight;
     background-color: $color-primary2;
+    position: relative;
 
     &__logo {
         max-height: 40px;
@@ -46,4 +47,41 @@
         }
 
     }
+
+}
+
+.nav--shown {
+    display: flex;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+
+    &__icon {
+        font-size: 30px;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+
+    .nav {
+        padding-top: 10px;
+        background-color: rgba(245, 245, 220, 0.454);
+        z-index: 10;
+        position: absolute;
+        top: 62.5px;
+        left: 0%;
+        right: 0%;
+        flex-direction: column;
+    }
+
+    .nav--shown {
+        display: none;
+    }
+
 }
