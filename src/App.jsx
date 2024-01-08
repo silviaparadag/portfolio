@@ -79,6 +79,9 @@ function App() {
     .slice(0, 3);
   console.log(top3Projects);
 
+  // const oneProject = top3Projects.slice(0, 1);
+  // console.log(oneProject);
+
   const handleFilters = (varName, varValue) => {
     if (varName === 'name') {
       setSearchByText(varValue.toLowerCase());
