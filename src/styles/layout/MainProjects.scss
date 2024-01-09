@@ -13,7 +13,7 @@
 .heroProjects {
     //max-width: 1200px;
     //margin: auto;
-    padding: 150px 0 64px;
+    padding: 70px 0 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,6 +21,9 @@
     //justify-content: center;
     gap: 1rem;
 
+    @include Tablet() {
+        padding-top: 150px;
+    }
 
     &__container {
         //max-width: 1200px;
@@ -47,9 +50,11 @@
             font-size: .8rem;
             line-height: 1.4;
             max-width: 45ch;
+            padding-bottom: 30px;
 
             @include Tablet() {
                 max-width: 75ch;
+                padding-bottom: 10px;
             }
         }
     }
@@ -72,10 +77,14 @@
     }
 
     &__fieldset {
-        // padding-top: 60px;
+        padding-top: 30px;
         display: flex;
         flex-direction: column;
         gap: 5px;
+
+        @include Tablet() {
+            padding-top: 30px;
+        }
     }
 
     &__label {
@@ -165,7 +174,7 @@
             filter: saturate(0%);
             min-width: 150px;
             max-width: 300px;
-            height: 300px;
+            height: 310px;
         }
 
         &--project:hover {
@@ -204,7 +213,7 @@
         }
 
         &--text1 {
-
+            height: 35px;
             padding-bottom: 10px;
             color: red;
         }
