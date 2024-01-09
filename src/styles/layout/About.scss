@@ -1,4 +1,5 @@
 @import '../core/variables.scss';
+@import '../core/mixins.scss';
 
 .aboutProjects {
     margin: auto;
@@ -43,6 +44,11 @@
             font-size: .8rem;
             line-height: 1.55;
             max-width: 45ch;
+
+            @include Tablet() {
+                max-width: 75ch;
+            }
+
         }
 
         &--img {

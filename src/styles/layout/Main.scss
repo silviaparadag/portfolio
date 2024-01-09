@@ -62,6 +62,10 @@
             width: 100%;
 
             @include Tablet() {
+                width: 75%;
+            }
+
+            @include Desktop() {
                 width: 50%;
             }
         }

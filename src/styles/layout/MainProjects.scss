@@ -1,7 +1,9 @@
 @import '../core/variables.scss';
+@import '../core/mixins.scss';
 
 .mainProjects {
-    margin: auto;
+    padding: 40px;
+    //margin: auto;
     color: $color-primary;
     display: flex;
     flex-direction: column;
@@ -26,7 +28,7 @@
         display: flex;
         flex-direction: column;
         text-align: left;
-        padding-bottom: 70px;
+        padding-bottom: 20px;
         border-bottom: white solid 1px;
 
         &--title {
@@ -45,6 +47,10 @@
             font-size: .8rem;
             line-height: 1.4;
             max-width: 45ch;
+
+            @include Tablet() {
+                max-width: 75ch;
+            }
         }
     }
 
@@ -53,12 +59,17 @@
 .filters {
     //padding-right: 40px;
     //width: 100%;
-    min-width: 300px;
+    min-width: 240px;
     max-width: 400px;
     display: flex;
     //flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+    gap: 30px;
+
+    @include Tablet() {
+        min-width: 340px;
+    }
 
     &__fieldset {
         // padding-top: 60px;
@@ -75,22 +86,29 @@
     }
 
     &__field {
-        width: 100%;
+        width: 130px;
         padding: 5px 10px;
         border-radius: 5px;
+
         // margin-bottom: 1rem;
+        @include Tablet() {
+            min-width: 200px;
+        }
     }
 
     &__select {
         width: 100%;
         padding: 5px 10px;
         border-radius: 5px;
+
+        @include Tablet() {
+            min-width: 120px;
+        }
     }
 
 }
 
 .sectionProjects {
-    //padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,10 +145,16 @@
             // justify-content: space-between;
             // gap: 20px;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
             grid-auto-rows: auto;
             grid-gap: 40px;
+
             //padding: 1rem 0;
+            @include Tablet() {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-auto-rows: auto;
+                grid-gap: 40px;
+            }
         }
 
         &--project {

@@ -14,7 +14,15 @@
   //width: 100%;
   background-color: $color-primary2;
   font-family: $font-main;
+
   //background-image: linear-gradient(to bottom, #f0f7d467 25%, #f0f7d467), url("../images/lime.jpeg");
+  @include Desktop() {
+    padding: 0 250px;
+  }
+
+  @include Tablet() {
+    padding: 0 40px;
+  }
 }
 
 
