@@ -1,4 +1,5 @@
 @import '../core/variables.scss';
+@import '../core/mixins.scss';
 
 .mainResume {
     margin: auto;
@@ -27,6 +28,9 @@
             padding: 20px 0 10px;
             font-family: $font-secondary2;
             font-size: 1.75rem;
+            text-align: center;
+
+            @include Tablet() {}
 
         }
 
@@ -36,29 +40,54 @@
         }
 
         &--text {
-            text-align: center;
+            text-align: left;
             max-width: 45ch;
             font-size: .8rem;
             line-height: 1.4;
             padding: 20px 0;
+
+            @include Tablet() {
+                text-align: center;
+            }
         }
     }
 
     &__container2 {
         max-width: 1024px;
-        margin-right: 40px;
+        //margin-right: 40px;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
 
+        @include Tablet() {}
+
+        @include Tablet() {
+            flex-direction: row;
+        }
+
         &--left {
-            min-width: 475px;
-            max-height: 380px;
+            // min-width: 475px;
+            // max-height: 380px;
+            max-height: 220px;
             display: flex;
             justify-content: center;
             position: relative;
             overflow-y: scroll;
+            padding-left: 50px;
+
+            @include Tablet() {
+                padding-left: 0;
+                min-width: 375px;
+                max-height: 320px;
+            }
+
+            @include Desktop() {
+                padding-left: 0;
+                min-width: 475px;
+                max-height: 380px;
+            }
         }
 
         &--lineV {
@@ -89,6 +118,7 @@
 
     &__item {
         display: flex;
+        cursor: pointer;
 
         &--group {
             display: flex;
@@ -97,10 +127,18 @@
         }
 
         &--lineH1 {
-            width: 150px;
+            width: 10px;
             height: 1px;
             margin: 0.5rem 0;
             border: 1px solid;
+
+            @include Tablet() {
+                width: 100px;
+            }
+
+            @include Desktop() {
+                width: 150px;
+            }
         }
 
         &--text {
@@ -126,24 +164,34 @@
 .jobDescription {
     color: $color-primary;
     height: 380px;
-    margin-right: 40px;
+    //margin-right: 40px;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     align-items: flex-end;
-    min-width: 300px;
+    min-width: 240px;
+
+    @include Tablet() {
+        margin-right: 40px;
+        min-width: 300px;
+    }
 
     &__item {
         color: $color-secondary4;
+
+        @include Tablet() {}
 
         &--group2 {
             display: flex;
             align-items: center;
             justify-content: start;
             padding: 15px;
-            width: 300px;
+            width: 240px;
             min-height: 150px;
 
+            @include Tablet() {
+                width: 300px;
+            }
         }
 
         &--title {
@@ -153,11 +201,17 @@
         }
 
         &--text {
-            font-size: .8rem;
+            font-size: .65rem;
             border-left: 1px $color-primary dotted;
             line-height: 1.2rem;
-            padding: 0 15px;
+            padding: 0 10px;
+
             //width: 50ch;
+            @include Tablet() {
+                font-size: .8rem;
+                padding: 0 15px;
+            }
+
         }
 
     }
@@ -171,50 +225,145 @@
 
 .milestonesEducation {
     color: $color-primary;
-    width: 600px;
+    height: 200px;
     display: flex;
     gap: 2rem;
-    flex-direction: row;
-    flex-wrap: wrap;
+    // flex-direction: row;
+    // flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 40px 0;
-    position: relative;
-    margin: 20px 0;
+    // padding: 40px 0;
+    // position: relative;
+    // margin: 20px 0;
+
+    @include Tablet() {
+        flex-direction: row;
+        width: 600px;
+        height: 100%;
+        padding: 40px 0;
+        position: relative;
+        margin: 20px 0;
+    }
+
 
     &__items {
         display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 10px;
+
+        @include Tablet() {
+            flex-direction: row;
+            padding-left: 0;
+        }
+
     }
 
     &__lineH {
         position: absolute;
-        //top: 30px;
-        width: 100%;
-        height: 1px;
+        // width: 400px;
+        // height: 1.2px;
         background-color: $color-primary;
         z-index: 1;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
+        width: 1px;
+        height: 240px;
+        margin-left: 10px;
+
+        @include Tablet() {
+            width: 400px;
+            height: 1.2px;
+            margin-bottom: 20px;
+            margin-left: 0;
+        }
     }
 
     &__item {
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: row;
-        align-items: center;
+        // display: flex;
+        // justify-content: space-evenly;
+        // flex-direction: row;
+        // align-items: center;
         margin-top: -20px;
-        position: relative;
-        z-index: 2;
+        // position: relative;
+        // z-index: 2;
+
+        @include Tablet() {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
 
         &--title {
-            max-width: 17ch;
-            transform: translateY(-75px);
+            display: flex;
+            flex-direction: row;
+            // flex-direction: column;
+            align-items: center;
+            // max-width: 15ch;
+            // position: relative;
+            // left: 50%;
+            // transform: translate(-50%, 75px);
+            // text-align: center;
+            transform: translateY(50%);
+
+            @include Tablet() {
+                flex-direction: column;
+                max-width: 200px;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 75px);
+                text-align: center;
+            }
         }
 
-        &--desc {
-            max-width: 17ch;
+        &--text {
+            // transform: translateY(-150px);
+            // width: 45px;
+            // height: 100px;
+            width: 80px;
+            transform: translateX(-75px);
             text-align: start;
-            transform: translateY(75px);
+            display: flex;
+            font-weight: bold;
+
+
+            @include Tablet() {
+                height: 40px;
+                transform: translateY(-150px);
+                text-align: center;
+            }
         }
+
+        &--text2 {
+            transform: translateX(130px);
+            text-align: start;
+
+            // margin-top: 10px;
+            // transform: translateY(25px);
+
+            @include Tablet() {
+                height: 40px;
+                margin-top: 20px;
+                transform: translateY(25px);
+                text-align: center;
+            }
+        }
+
+
+        // &--desc {
+        //     max-width: 19ch;
+        //     text-align: left;
+        //     position: relative;
+        //     left: 50%;
+        //     display: flex;
+        //     flex-direction: column;
+        //     align-items: center;
+        //     gap: 2px;
+        //     transform: translate(-120%, 80px);
+        // }
 
 
         &--dot {
@@ -224,28 +373,81 @@
             background-color: white;
             position: absolute;
             left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            // top: 50%;
+            // transform: translate(-50%, -50%);
             z-index: 3;
+            transform: translate(-0.1px, -4px);
+
+            @include Tablet() {
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
 
         &--lineV {
+            // position: absolute;
+            // top: -50px;
+            // bottom: -50px;
+            // left: 50%;
             // width: 1px;
-            // height: 120px;
-            // border: 1px white solid;
-            position: absolute;
-            top: -50px;
-            bottom: -50px;
-            left: 50%;
-            width: 1px;
+            height: 1px;
             background-color: $color-primary;
-            transform: translateX(-50%);
-            z-index: 2;
+            // z-index: 2;
+
+            @include Tablet() {
+                position: absolute;
+                top: -50px;
+                bottom: -50px;
+                left: 50%;
+                z-index: 2;
+                width: 1px;
+                height: 200px;
+            }
         }
 
     }
 }
 
+.padding {
+    padding-top: 5px;
+    font-style: italic;
+    width: 100px;
+}
+
+
+.sectionMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &--title {
+            padding: 20px 0 10px;
+            font-family: $font-secondary2;
+            font-size: 1.75rem;
+        }
+
+        &--text {
+            text-align: center;
+            max-width: 45ch;
+            font-size: .8rem;
+            line-height: 1.4;
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+
+        &--titleSpan {
+            font-style: italic;
+            font-family: $font-secondary;
+        }
+    }
+}
 
 .sectionResume2 {
     display: flex;
@@ -280,6 +482,8 @@
         }
     }
 }
+
+
 
 .sectionResume3 {
     padding: 60px 0;

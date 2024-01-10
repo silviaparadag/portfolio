@@ -6,10 +6,23 @@ const ProjectsHero = (props) => {
   return (
     <section className="heroProjects">
       <div className="heroProjects__container">
-        <h2 className="heroProjects__container--title">Projects</h2>
+        <h2 className="heroProjects__container--title">
+          {' '}
+          My
+          <span className="heroProjects__container--titleSpan">
+            {' '}
+            little coding{' '}
+          </span>{' '}
+          adventures
+        </h2>
         <p className="heroProjects__container--text">
-          Explore a portfolio of my technological works, where you will discover
-          the main projects I have done during the last year.
+          Welcome to my Projects page, explore a portfolio of my latest tech
+          work, where you'll discover the main projects I've done during the
+          last year, mainly during my bootcamp at Adalab. <br />
+          Whether you are a fellow developer, a potential client, or just a
+          curious soul or recruiter, I invite you to browse through them, and
+          you can even discover more in each GitHub repository! <br />I hope you
+          find something that interests you.
         </p>
       </div>
       <FilterForm

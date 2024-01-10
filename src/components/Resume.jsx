@@ -1,13 +1,26 @@
 import '../styles/layout/Resume.scss';
 import cap from '../images/sp-cap-bis.svg';
 import fromWhere from '../images/from-where.svg';
-import { useState } from 'react';
+import fromWhereMobile from '../images/from-where-mobile.svg';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import SliderOldProjects from './SliderOldProjects';
 
 const Resume = (props) => {
   const [isShown, setIsShown] = useState(false);
   const [jobId, setJobId] = useState('');
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleMouseOn = (id) => {
     setJobId(id);
@@ -54,18 +67,29 @@ const Resume = (props) => {
   const titles = props.titlesList.map((eachTitle) => {
     return (
       <li key={eachTitle.id} className="milestonesEducation__item">
-        <div className="milestonesEducation__item--title">{eachTitle.name}</div>
+        <div className="milestonesEducation__item--title">
+          <div className="milestonesEducation__item--text">
+            {eachTitle.name}
+          </div>{' '}
+          <div className="milestonesEducation__item--text2">
+            {eachTitle.year}
+            <br />
+            <p className="padding"> {eachTitle.institution}</p>
+          </div>
+        </div>
+        {/* <div className="milestonesEducation__item--title">{eachTitle.name}</div> */}
         <div className="milestonesEducation__item--dot"></div>
         <div className="milestonesEducation__item--lineV"></div>
-        <div className="milestonesEducation__item--desc">
+        {/* <div className="milestonesEducation__item--desc">
           <p className="milestonesEducation__item--text2">{eachTitle.year}</p>
           <p className="milestonesEducation__item--text2">
             {eachTitle.institution}
           </p>
-        </div>
+        </div> */}
       </li>
     );
   });
+
   return (
     <main className="mainResume">
       <section className="sectionResume">
@@ -125,7 +149,7 @@ const Resume = (props) => {
         </div>
         <div className="sectionResume5__container2">
           <img
-            src={fromWhere}
+            src={windowWidth < 480 ? fromWhereMobile : fromWhere}
             alt="Location timeline"
             className="sectionResume5__container2--img"
           />
