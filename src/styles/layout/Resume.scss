@@ -28,6 +28,9 @@
             padding: 20px 0 10px;
             font-family: $font-secondary2;
             font-size: 1.75rem;
+            text-align: center;
+
+            @include Tablet() {}
 
         }
 
@@ -67,7 +70,7 @@
         &--left {
             // min-width: 475px;
             // max-height: 380px;
-            max-height: 250px;
+            max-height: 220px;
             display: flex;
             justify-content: center;
             position: relative;
@@ -115,6 +118,7 @@
 
     &__item {
         display: flex;
+        cursor: pointer;
 
         &--group {
             display: flex;
@@ -160,24 +164,34 @@
 .jobDescription {
     color: $color-primary;
     height: 380px;
-    margin-right: 40px;
+    //margin-right: 40px;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     align-items: flex-end;
-    min-width: 300px;
+    min-width: 240px;
+
+    @include Tablet() {
+        margin-right: 40px;
+        min-width: 300px;
+    }
 
     &__item {
         color: $color-secondary4;
+
+        @include Tablet() {}
 
         &--group2 {
             display: flex;
             align-items: center;
             justify-content: start;
             padding: 15px;
-            width: 300px;
+            width: 240px;
             min-height: 150px;
 
+            @include Tablet() {
+                width: 300px;
+            }
         }
 
         &--title {
@@ -187,11 +201,17 @@
         }
 
         &--text {
-            font-size: .8rem;
+            font-size: .65rem;
             border-left: 1px $color-primary dotted;
             line-height: 1.2rem;
-            padding: 0 15px;
+            padding: 0 10px;
+
             //width: 50ch;
+            @include Tablet() {
+                font-size: .8rem;
+                padding: 0 15px;
+            }
+
         }
 
     }
@@ -222,12 +242,12 @@
 
     &__lineH {
         position: absolute;
-        //top: 30px;
         width: 100%;
         height: 1px;
         background-color: $color-primary;
         z-index: 1;
         margin-bottom: 20px;
+
     }
 
     &__item {
@@ -264,9 +284,6 @@
         }
 
         &--lineV {
-            // width: 1px;
-            // height: 120px;
-            // border: 1px white solid;
             position: absolute;
             top: -50px;
             bottom: -50px;
