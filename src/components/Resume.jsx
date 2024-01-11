@@ -77,15 +77,8 @@ const Resume = (props) => {
             <p className="padding"> {eachTitle.institution}</p>
           </div>
         </div>
-        {/* <div className="milestonesEducation__item--title">{eachTitle.name}</div> */}
         <div className="milestonesEducation__item--dot"></div>
         <div className="milestonesEducation__item--lineV"></div>
-        {/* <div className="milestonesEducation__item--desc">
-          <p className="milestonesEducation__item--text2">{eachTitle.year}</p>
-          <p className="milestonesEducation__item--text2">
-            {eachTitle.institution}
-          </p>
-        </div> */}
       </li>
     );
   });
