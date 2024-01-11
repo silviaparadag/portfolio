@@ -1,6 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-//import { animateScroll as scroll } from 'react-scroll';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomeHero from './components/HomeHero';
@@ -78,9 +77,6 @@ function App() {
     .sort((a, b) => b.score - a.score)
     .slice(0, 3);
   console.log(top3Projects);
-
-  // const oneProject = top3Projects.slice(0, 1);
-  // console.log(oneProject);
 
   const handleFilters = (varName, varValue) => {
     if (varName === 'name') {

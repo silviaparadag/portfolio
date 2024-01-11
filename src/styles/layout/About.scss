@@ -23,10 +23,10 @@
         flex-direction: column;
         text-align: left;
         padding-bottom: 20px;
-        border-bottom: white solid 1px;
+        border-bottom: $color-primary solid 1px;
 
         &--title {
-            border-bottom: white solid 1px;
+            border-bottom: $color-primary solid 1px;
             font-family: $font-secondary;
             font-style: italic;
             text-align: right;
@@ -46,6 +46,10 @@
             max-width: 45ch;
 
             @include Tablet() {
+                max-width: 75ch;
+            }
+
+            @include Desktop() {
                 max-width: 75ch;
             }
 

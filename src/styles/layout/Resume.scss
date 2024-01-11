@@ -29,9 +29,6 @@
             font-family: $font-secondary2;
             font-size: 1.75rem;
             text-align: center;
-
-            @include Tablet() {}
-
         }
 
         &--titleSpan {
@@ -49,27 +46,32 @@
             @include Tablet() {
                 text-align: center;
             }
+
+            @include Desktop() {
+                text-align: center;
+            }
         }
     }
 
     &__container2 {
         max-width: 1024px;
-        //margin-right: 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
 
-        @include Tablet() {}
 
         @include Tablet() {
             flex-direction: row;
         }
 
+        @include Desktop() {
+            flex-direction: row;
+        }
+
         &--left {
-            // min-width: 475px;
-            // max-height: 380px;
+
             max-height: 220px;
             display: flex;
             justify-content: center;
@@ -164,7 +166,6 @@
 .jobDescription {
     color: $color-primary;
     height: 380px;
-    //margin-right: 40px;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -206,8 +207,12 @@
             line-height: 1.2rem;
             padding: 0 10px;
 
-            //width: 50ch;
             @include Tablet() {
+                font-size: .8rem;
+                padding: 0 15px;
+            }
+
+            @include Desktop() {
                 font-size: .8rem;
                 padding: 0 15px;
             }
@@ -228,15 +233,20 @@
     height: 200px;
     display: flex;
     gap: 2rem;
-    // flex-direction: row;
-    // flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    // padding: 40px 0;
-    // position: relative;
-    // margin: 20px 0;
+
 
     @include Tablet() {
+        flex-direction: row;
+        width: 600px;
+        height: 100%;
+        padding: 40px 0;
+        position: relative;
+        margin: 20px 0;
+    }
+
+    @include Desktop() {
         flex-direction: row;
         width: 600px;
         height: 100%;
@@ -258,15 +268,17 @@
             padding-left: 0;
         }
 
+        @include Desktop() {
+            flex-direction: row;
+            padding-left: 0;
+        }
+
     }
 
     &__lineH {
         position: absolute;
-        // width: 400px;
-        // height: 1.2px;
         background-color: $color-primary;
         z-index: 1;
-        // margin-bottom: 20px;
         width: 1px;
         height: 240px;
         margin-left: 10px;
@@ -277,18 +289,29 @@
             margin-bottom: 20px;
             margin-left: 0;
         }
+
+        @include Desktop() {
+            width: 400px;
+            height: 1.2px;
+            margin-bottom: 20px;
+            margin-left: 0;
+        }
     }
 
     &__item {
-        // display: flex;
-        // justify-content: space-evenly;
-        // flex-direction: row;
-        // align-items: center;
         margin-top: -20px;
-        // position: relative;
-        // z-index: 2;
+
 
         @include Tablet() {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        @include Desktop() {
             display: flex;
             justify-content: space-evenly;
             flex-direction: row;
@@ -300,13 +323,8 @@
         &--title {
             display: flex;
             flex-direction: row;
-            // flex-direction: column;
             align-items: center;
-            // max-width: 15ch;
-            // position: relative;
-            // left: 50%;
-            // transform: translate(-50%, 75px);
-            // text-align: center;
+
             transform: translateY(50%);
 
             @include Tablet() {
@@ -317,12 +335,18 @@
                 transform: translate(-50%, 75px);
                 text-align: center;
             }
+
+            @include Desktop() {
+                flex-direction: column;
+                max-width: 200px;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 75px);
+                text-align: center;
+            }
         }
 
         &--text {
-            // transform: translateY(-150px);
-            // width: 45px;
-            // height: 100px;
             width: 80px;
             transform: translateX(-75px);
             text-align: start;
@@ -335,14 +359,17 @@
                 transform: translateY(-150px);
                 text-align: center;
             }
+
+            @include Desktop() {
+                height: 40px;
+                transform: translateY(-150px);
+                text-align: center;
+            }
         }
 
         &--text2 {
             transform: translateX(130px);
             text-align: start;
-
-            // margin-top: 10px;
-            // transform: translateY(25px);
 
             @include Tablet() {
                 height: 40px;
@@ -350,21 +377,14 @@
                 transform: translateY(25px);
                 text-align: center;
             }
+
+            @include Desktop() {
+                height: 40px;
+                margin-top: 20px;
+                transform: translateY(25px);
+                text-align: center;
+            }
         }
-
-
-        // &--desc {
-        //     max-width: 19ch;
-        //     text-align: left;
-        //     position: relative;
-        //     left: 50%;
-        //     display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
-        //     gap: 2px;
-        //     transform: translate(-120%, 80px);
-        // }
-
 
         &--dot {
             width: 10px;
@@ -373,8 +393,6 @@
             background-color: white;
             position: absolute;
             left: 50%;
-            // top: 50%;
-            // transform: translate(-50%, -50%);
             z-index: 3;
             transform: translate(-0.1px, -4px);
 
@@ -382,19 +400,28 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
             }
+
+            @include Desktop() {
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
 
         &--lineV {
-            // position: absolute;
-            // top: -50px;
-            // bottom: -50px;
-            // left: 50%;
-            // width: 1px;
             height: 1px;
             background-color: $color-primary;
-            // z-index: 2;
 
             @include Tablet() {
+                position: absolute;
+                top: -50px;
+                bottom: -50px;
+                left: 50%;
+                z-index: 2;
+                width: 1px;
+                height: 200px;
+            }
+
+            @include Desktop() {
                 position: absolute;
                 top: -50px;
                 bottom: -50px;
@@ -412,41 +439,6 @@
     padding-top: 5px;
     font-style: italic;
     width: 100px;
-}
-
-
-.sectionMobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 60px;
-
-    &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        &--title {
-            padding: 20px 0 10px;
-            font-family: $font-secondary2;
-            font-size: 1.75rem;
-        }
-
-        &--text {
-            text-align: center;
-            max-width: 45ch;
-            font-size: .8rem;
-            line-height: 1.4;
-            padding: 20px 0;
-            margin-bottom: 40px;
-        }
-
-        &--titleSpan {
-            font-style: italic;
-            font-family: $font-secondary;
-        }
-    }
 }
 
 .sectionResume2 {
@@ -637,7 +629,15 @@
         gap: 15px;
 
         &--img {
-            width: 60%;
+            width: 70%;
+
+            @include Tablet() {
+                width: 90%;
+            }
+
+            @include Desktop() {
+                width: 777px;
+            }
         }
 
         &--img2 {
@@ -647,7 +647,7 @@
     }
 }
 
-// IMPORTATN: Adjust ARROWS' size for different devices
+// IMPORTANT: Adjust ARROWS' size for different devices
 
 .image-gallery-icon.image-gallery-left-nav svg,
 .image-gallery-icon.image-gallery-right-nav svg {
@@ -655,20 +655,8 @@
     height: 60px;
 }
 
-// .image-gallery-slides {
-//     display: flex;
-
-// }
 
 .image-gallery-swipe {
     display: flex;
     justify-content: center;
 }
-
-// .image-gallery-center {
-//     display: flex;
-// }
-
-// .image-gallery-description.image-gallery-slide {
-//     position: relative;
-// }

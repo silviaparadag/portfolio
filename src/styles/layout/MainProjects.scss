@@ -3,7 +3,6 @@
 
 .mainProjects {
     padding: 40px;
-    //margin: auto;
     color: $color-primary;
     display: flex;
     flex-direction: column;
@@ -11,28 +10,27 @@
 }
 
 .heroProjects {
-    //max-width: 1200px;
-    //margin: auto;
     padding: 50px 0 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    //justify-content: center;
     gap: 1rem;
 
     @include Tablet() {
         padding-top: 70px;
     }
 
+    @include Desktop() {
+        padding-top: 70px;
+    }
+
     &__container {
-        //max-width: 1200px;
-        //padding: 0 40px;
         display: flex;
         flex-direction: column;
         text-align: left;
         padding-bottom: 20px;
-        border-bottom: white solid 1px;
+        border-bottom: $color-primary solid 1px;
 
         &--title {
             font-family: $font-secondary;
@@ -61,23 +59,29 @@
                 max-width: 75ch;
                 padding-bottom: 10px;
             }
+
+            @include Desktop() {
+                max-width: 75ch;
+                padding-bottom: 10px;
+            }
         }
     }
 
 }
 
 .filters {
-    //padding-right: 40px;
-    //width: 100%;
     min-width: 240px;
     max-width: 400px;
     display: flex;
-    //flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
     gap: 30px;
 
     @include Tablet() {
+        min-width: 340px;
+    }
+
+    @include Desktop() {
         min-width: 340px;
     }
 
@@ -90,10 +94,13 @@
         @include Tablet() {
             padding-top: 30px;
         }
+
+        @include Desktop() {
+            padding-top: 30px;
+        }
     }
 
     &__label {
-        //padding: 0 0 5px 10px;
         font-size: 10px;
         font-weight: 400;
         text-align: center;
@@ -104,8 +111,11 @@
         padding: 5px 10px;
         border-radius: 5px;
 
-        // margin-bottom: 1rem;
         @include Tablet() {
+            min-width: 200px;
+        }
+
+        @include Desktop() {
             min-width: 200px;
         }
     }
@@ -118,6 +128,10 @@
         @include Tablet() {
             min-width: 120px;
         }
+
+        @include Desktop() {
+            min-width: 120px;
+        }
     }
 
 }
@@ -128,16 +142,12 @@
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
-    //max-width: 1200px;
-    //margin: auto;
 
 
     &__container {
-        //padding: 0 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        // max-width: 500px;
 
         &--title {
             padding: 20px 0 10px;
@@ -154,17 +164,18 @@
         }
 
         &--projects {
-            // display: flex;
-            // flex-wrap: wrap;
-            // justify-content: space-between;
-            // gap: 20px;
             display: grid;
             grid-template-columns: 1fr;
             grid-auto-rows: auto;
             grid-gap: 40px;
 
-            //padding: 1rem 0;
             @include Tablet() {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-auto-rows: auto;
+                grid-gap: 40px;
+            }
+
+            @include Desktop() {
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-auto-rows: auto;
                 grid-gap: 40px;
@@ -173,8 +184,8 @@
 
         &--project {
             color: black;
-            box-shadow: 1px 1px 5px gray;
-            background-color: white;
+            box-shadow: 1px 1px 5px $color-secondary3;
+            background-color: $color-primary;
             filter: saturate(0%);
             min-width: 150px;
             max-width: 300px;
@@ -200,7 +211,7 @@
     }
 
     &__img:hover {
-        border: 1px solid #757575;
+        border: 1px solid $color-secondary4;
     }
 
     &__info {
@@ -219,7 +230,7 @@
         &--text1 {
             height: 35px;
             padding-bottom: 10px;
-            color: red;
+            color: $color-primary4;
         }
 
         &--text2 {
