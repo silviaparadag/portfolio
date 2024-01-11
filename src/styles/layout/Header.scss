@@ -28,7 +28,7 @@
     font-size: .85rem;
 
     &__link {
-        color: white;
+        color: $color-primary;
         text-decoration: none;
 
 
@@ -37,7 +37,7 @@
             padding: 10px 10px;
             border-radius: 10px;
             border: none;
-            background-color: red;
+            background-color: $color-primary4;
             color: $color-primary;
             text-decoration: none;
             font-size: .85rem;
@@ -82,7 +82,7 @@
 
     .nav {
         padding-top: 10px;
-        background-color: red;
+        background-color: $color-primary4;
         z-index: 10;
         position: absolute;
         top: 62.5px;

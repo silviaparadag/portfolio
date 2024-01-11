@@ -16,7 +16,7 @@
   font-family: $font-main;
 
   @include Desktop() {
-    padding: 0 250px;
+    padding: 0 200px;
   }
 
   @include Tablet() {

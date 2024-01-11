@@ -30,7 +30,7 @@
         flex-direction: column;
         text-align: left;
         padding-bottom: 20px;
-        border-bottom: white solid 1px;
+        border-bottom: $color-primary solid 1px;
 
         &--title {
             font-family: $font-secondary;
@@ -184,8 +184,8 @@
 
         &--project {
             color: black;
-            box-shadow: 1px 1px 5px gray;
-            background-color: white;
+            box-shadow: 1px 1px 5px $color-secondary3;
+            background-color: $color-primary;
             filter: saturate(0%);
             min-width: 150px;
             max-width: 300px;
@@ -211,7 +211,7 @@
     }
 
     &__img:hover {
-        border: 1px solid #757575;
+        border: 1px solid $color-secondary4;
     }
 
     &__info {
@@ -230,7 +230,7 @@
         &--text1 {
             height: 35px;
             padding-bottom: 10px;
-            color: red;
+            color: $color-primary4;
         }
 
         &--text2 {

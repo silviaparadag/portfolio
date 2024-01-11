@@ -131,8 +131,8 @@
         }
 
         &--project {
-            box-shadow: 1px 1px 5px red;
-            background-color: red;
+            box-shadow: 1px 1px 5px $color-primary4;
+            background-color: $color-primary4;
             width: 100px;
             height: 100px;
             border-radius: 50%;
@@ -171,7 +171,7 @@
     }
 
     &__avatar:hover {
-        box-shadow: 3px 3px 5px white;
+        box-shadow: 3px 3px 5px $color-primary;
         filter: sepia(100%);
     }
 }
@@ -211,7 +211,7 @@
         padding: 10px 45px;
         border-radius: 5px;
         border: none;
-        background-color: red;
+        background-color: $color-primary4;
         color: $color-primary;
         font-size: .8rem;
         text-decoration: none;
