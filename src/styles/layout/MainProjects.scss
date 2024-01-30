@@ -110,6 +110,10 @@
         width: 130px;
         padding: 5px 10px;
         border-radius: 5px;
+        height: 24px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
 
         @include Tablet() {
             min-width: 200px;
@@ -124,6 +128,16 @@
         width: 100%;
         padding: 5px 10px;
         border-radius: 5px;
+        height: 24px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('/caret-down-solid.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 8px;
+        border-right-width: 5px;
+        border-right-color: white;
 
         @include Tablet() {
             min-width: 120px;
