@@ -162,7 +162,7 @@ const Resume = (props) => {
         </div>
         <div className="sectionResume4__link">
           <a
-            href="https://drive.google.com/file/d/16D7hZ3wRuppVjCb4o2UmWdy3_I3q1vE1/view?usp=sharing"
+            href="https://drive.google.com/file/d/1-0pgFZxXrXMVum27wIPfUbcsHS-FMhWb/view?usp=sharing"
             className="sectionResume4__link--button1"
             target="_blank"
             rel="noreferrer"
@@ -170,7 +170,7 @@ const Resume = (props) => {
             EN
           </a>
           <a
-            href="https://drive.google.com/file/d/1eC5ZFPSaaaBkUshJVaxbnRoRVQAP8vmz/view?usp=sharing"
+            href="https://drive.google.com/file/d/1-2D-XpJWCfx_47f97NA-0S-YBoiKmq8k/view?usp=sharing"
             className="sectionResume4__link--button2"
             target="_blank"
             rel="noreferrer"
