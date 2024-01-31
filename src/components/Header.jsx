@@ -1,3 +1,4 @@
+import React from 'react';
 import '../styles/layout/Header.scss';
 //import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -10,30 +11,39 @@ const Header = (props) => {
   const toggleNav = () => {
     setIsNavShown(!isNavShown);
   };
+  const handleClick = () => {
+    setIsNavShown(false);
+  };
 
   useEffect(() => {
     setIsNavShown(false);
   }, []);
 
   const contactButton = props.isHomePage ? (
-    <button onClick={props.scrollToContact} className="nav__link--button">
+    <button
+      onClick={() => {
+        props.scrollToContact();
+        handleClick();
+      }}
+      className="nav__link--button"
+    >
       Contact
     </button>
   ) : (
-    <a href="#contact" className="nav__link--button">
+    <a onClick={handleClick} href="#contact" className="nav__link--button">
       Contact
     </a>
   );
 
   const navigationMenu = () => (
     <nav className={`nav ${isNavShown ? '' : 'nav--shown'}`}>
-      <a href="#aboutme" className="nav__link">
+      <a onClick={handleClick} href="#aboutme" className="nav__link">
         About me
       </a>
-      <a href="#projects" className="nav__link">
+      <a onClick={handleClick} href="#projects" className="nav__link">
         Projects
       </a>
-      <a href="#resume" className="nav__link">
+      <a onClick={handleClick} href="#resume" className="nav__link">
         CV
       </a>
       {contactButton}
